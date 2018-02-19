@@ -1,0 +1,324 @@
+/**** SCSS FANCIES ****/
+/** VARIABLES **/
+/* FONTS */
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+@font-face {
+  font-family: 'Starway', cursive;
+  src: url("../fonts/starway/starway-webfont.woff2") format("woff2"), url("../fonts/starway/starway-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+/* COLORS */
+/**** GENERAL ****/
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.container {
+  margin-left: 285px;
+  /* Same as the navbar width*/ }
+
+/** PAGE LAYOUT **/
+.row::after {
+  content: "";
+  clear: both;
+  display: table; }
+
+.col-1 {
+  width: 8.33%; }
+
+.col-2 {
+  width: 16.66%; }
+
+.col-3 {
+  width: 25%; }
+
+.col-4 {
+  width: 33.33%; }
+
+.col-5 {
+  width: 41.66%; }
+
+.col-6 {
+  width: 50%; }
+
+.col-7 {
+  width: 58.33%; }
+
+.col-8 {
+  width: 66.66%; }
+
+.col-9 {
+  width: 75%; }
+
+.col-10 {
+  width: 83.33%; }
+
+.col-11 {
+  width: 91.66%; }
+
+.col-12 {
+  width: 100%; }
+
+[class*="col-"] {
+  float: left; }
+
+/** HEADINGS **/
+.page-box {
+  margin: 2.5em 4em;
+  color: #2A2D34; }
+
+.section-title {
+  font-family: "Starway";
+  font-size: 100px;
+  text-align: center; }
+
+.section-title-blue {
+  color: #00A7E0; }
+
+.section-title-red {
+  color: #FF6A6A; }
+
+.secondary-title {
+  font-family: "Starway";
+  font-size: 62px;
+  text-align: center; }
+
+.page-heading {
+  display: inline-block;
+  margin-top: 0.3em;
+  font-family: "Starway";
+  font-size: 3.5em; }
+  .page-heading:nth-of-type(odd) {
+    border-bottom: 2px solid #00A7E0; }
+  .page-heading:nth-of-type(even) {
+    border-bottom: 2px solid #FF6A6A;
+    margin-top: 0; }
+
+.page-description {
+  padding: 1.5em 3em;
+  font-family: "Open Sans", sans-serif;
+  font-size: 20px;
+  text-indent: 2em; }
+
+.colored-borders {
+  margin: 0 auto;
+  position: relative;
+  max-width: 950px; }
+  .colored-borders:after {
+    background: -webkit-gradient(linear, left top, right top, color-stop(25%, #FF6A6A), color-stop(25%, #00A7E0), color-stop(50%, #00A7E0), color-stop(50%, #00A7E0), color-stop(75%, #00A7E0), color-stop(75%, #00A7E0));
+    background: -webkit-linear-gradient(left, #FF6A6A 25%, #00A7E0 25%, #00A7E0 50%, #00A7E0 50%, #00A7E0 75%, #00A7E0 75%);
+    background: -o-linear-gradient(left, #FF6A6A 25%, #00A7E0 25%, #00A7E0 50%, #00A7E0 50%, #00A7E0 75%, #00A7E0 75%);
+    background: linear-gradient(to right, #FF6A6A 25%, #00A7E0 25%, #00A7E0 50%, #00A7E0 50%, #00A7E0 75%, #00A7E0 75%);
+    position: absolute;
+    content: '';
+    height: 2px;
+    right: 0;
+    left: 0;
+    top: 0;
+    opacity: 0.8; }
+  .colored-borders:before {
+    background: -webkit-gradient(linear, left top, right top, color-stop(25%, #FF6A6A), color-stop(25%, #00A7E0), color-stop(50%, #00A7E0), color-stop(50%, #00A7E0), color-stop(75%, #00A7E0), color-stop(75%, #00A7E0));
+    background: -webkit-linear-gradient(left, #FF6A6A 25%, #00A7E0 25%, #00A7E0 50%, #00A7E0 50%, #00A7E0 75%, #00A7E0 75%);
+    background: -o-linear-gradient(left, #FF6A6A 25%, #00A7E0 25%, #00A7E0 50%, #00A7E0 50%, #00A7E0 75%, #00A7E0 75%);
+    background: linear-gradient(to right, #FF6A6A 25%, #00A7E0 25%, #00A7E0 50%, #00A7E0 50%, #00A7E0 75%, #00A7E0 75%);
+    position: absolute;
+    content: '';
+    height: 2px;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    opacity: 0.8; }
+
+/** LISTS **/
+ul {
+  font-family: "Open Sans", sans-serif; }
+
+.colored-list ul li:nth-of-type(even):before {
+  content: '\25CB ' !important;
+  color: #FF6A6A;
+  padding-left: 5em !important; }
+
+.colored-list ul li:nth-of-type(odd):before {
+  content: '\25CB ' !important;
+  color: #FF6A6A;
+  padding-left: 5em !important; }
+
+.colored-list li:nth-of-type(even) {
+  list-style-type: none; }
+  .colored-list li:nth-of-type(even):before {
+    content: '\25CB ';
+    color: #FF6A6A;
+    padding-right: 0.5em; }
+
+.colored-list li:nth-of-type(odd) {
+  list-style-type: none; }
+  .colored-list li:nth-of-type(odd):before {
+    content: '\25CB ';
+    color: #00A7E0;
+    padding-right: 0.5em; }
+
+/** IMAGES **/
+.logo {
+  display: block;
+  width: 288px;
+  margin: 0 auto; }
+
+/** BUTTONS **/
+button {
+  display: block;
+  padding: 1em 2em;
+  border: none;
+  background: #FFDC00;
+  color: #2A2D34; }
+
+/** LINKS **/
+a {
+  text-decoration: none;
+  color: #FFDC00; }
+
+/**** DESKTOP NAVIGATION ****/
+.nav-block {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  top: 0;
+  width: 285px;
+  height: 100%;
+  background-color: #2A2D34; }
+
+.desktop-menu {
+  list-style-type: none;
+  font-family: "Starway";
+  font-size: 3em;
+  text-align: left; }
+  .desktop-menu .desktop-menu-item {
+    padding: 0 0 25px 25px; }
+    .desktop-menu .desktop-menu-item:first-child a {
+      padding: 0;
+      text-align: center;
+      margin-bottom: 1.5em;
+      color: #FF0F0F; }
+    .desktop-menu .desktop-menu-item:nth-child(odd) a {
+      color: #FF0F0F; }
+    .desktop-menu .desktop-menu-item:nth-child(even) a {
+      color: #00A7E0; }
+
+.active {
+  width: 42px;
+  height: 42px;
+  float: right;
+  margin-top: 10px; }
+
+/**** MOBILE NAVIGATION ****/
+/**** HOME PAGE ****/
+/**** ABOUT PAGE ****/
+.about-section .page-description {
+  padding: .5em 3em 1.5em 3em; }
+
+.qualities-list-container {
+  padding: 20px 0;
+  font-size: 20px; }
+  .qualities-list-container .test {
+    float: right;
+    padding-right: 3em; }
+
+/**** HOMEWORK PAGE ****/
+.dmacc-classes {
+  text-align: center; }
+  .dmacc-classes .list-box {
+    /*Centers list*/
+    display: inline-block;
+    margin: 0 auto;
+    text-align: left; }
+
+.dmacc-classes-active .page-heading {
+  border-bottom: 2px solid #FF6A6A; }
+
+.dmacc-classes-active ul a {
+  color: #2A2D34; }
+
+.dmacc-classes-inactive ul a {
+  color: grey; }
+
+.dmacc-class-id {
+  color: #FF6A6A; }
+
+.dmacc-class-descrip {
+  color: #00A7E0; }
+
+/**** RESUME PAGE ****/
+.resume-btn {
+  margin: 1em auto 0 auto;
+  border-radius: 0.2em;
+  cursor: pointer; }
+
+.education-list {
+  list-style-type: none;
+  font-size: 20px; }
+
+.skills-list-container {
+  position: relative;
+  display: inline-block;
+  list-style: none;
+  width: 100%;
+  margin: auto; }
+
+.experience-list-item-lead {
+  font-weight: bold;
+  font-size: 20px; }
+
+.experience-date {
+  font-weight: normal;
+  font-style: italic; }
+
+/**** PORTFOLIO PAGE ****/
+/**** CONTACT PAGE ****/
+.contact-form {
+  padding-top: 2em;
+  padding-bottom: 2em; }
+  .contact-form label {
+    display: inline-block;
+    font-family: "Open Sans", sans-serif;
+    font-size: 20px;
+    font-weight: bold; }
+  .contact-form div input[type="text"] {
+    width: 90%;
+    padding: 0.3em .4em;
+    border: 3px solid #00A7E0;
+    outline: none;
+    border-radius: 2px; }
+  .contact-form .border-red {
+    border: 3px solid #FF6A6A !important; }
+  .contact-form textarea {
+    width: 100%;
+    border: 3px solid #FF6A6A;
+    border-radius: 2px; }
+  .contact-form .btn-group {
+    margin: 0 auto;
+    text-align: center; }
+  .contact-form .form-btn {
+    display: inline-block;
+    margin: 1em 0;
+    border: 3px solid #2A2D34;
+    border-radius: 25px;
+    font-size: .8em;
+    font-weight: bold;
+    color: #2A2D34; }
+    .contact-form .form-btn:hover {
+      cursor: pointer; }
+  .contact-form .submit-btn {
+    background: #00E676; }
+  .contact-form .form-error {
+    display: block;
+    color: #FFDC00;
+    text-shadow: 1px 1px black;
+    font-family: "Open Sans", sans-serif;
+    font-size: 1em;
+    font-weight: bold; }

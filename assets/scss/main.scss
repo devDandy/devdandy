@@ -1,0 +1,399 @@
+
+/**** SCSS FANCIES ****/
+
+	/** VARIABLES **/
+	
+
+		/* FONTS */
+
+			@font-face {
+			    font-family: 'Starway', cursive;
+			    src: url('../fonts/starway/starway-webfont.woff2') format('woff2'),
+			         url('../fonts/starway/starway-webfont.woff') format('woff');
+			    font-weight: normal;
+			    font-style: normal;
+			}
+			 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+			$primary-font: 'Starway';
+			$secondary-font: 'Open Sans', sans-serif;;
+
+
+		/* COLORS */
+
+			$primary-color: #FF6A6A;
+
+			$alt-primary-color: #FF0F0F;
+
+			$secondary-color: #00A7E0;
+
+			$third-color: #2A2D34 ;
+
+			$fourth-color: #FFDC00 ;
+
+			$nav-background: $third-color;
+
+			$nav-red: $alt-primary-color;
+
+
+
+
+/**** GENERAL ****/
+	* {
+		box-sizing: border-box;
+		margin: 0;
+		padding: 0;
+	}
+	html {
+	  -webkit-font-smoothing: antialiased;
+	  -moz-osx-font-smoothing: grayscale;
+	}
+
+	.container {
+		margin-left: 285px; /* Same as the navbar width*/
+	}
+
+	/** PAGE LAYOUT **/
+
+		.row::after {
+		    content: "";
+		    clear: both;
+		    display: table;
+		}
+
+		.col-1 {width: 8.33%;}
+		.col-2 {width: 16.66%;}
+		.col-3 {width: 25%;}
+		.col-4 {width: 33.33%;}
+		.col-5 {width: 41.66%;}
+		.col-6 {width: 50%;}
+		.col-7 {width: 58.33%;}
+		.col-8 {width: 66.66%;}
+		.col-9 {width: 75%;}
+		.col-10 {width: 83.33%;}
+		.col-11 {width: 91.66%;}
+		.col-12 {width: 100%;}
+
+		[class*="col-"] {
+		    float: left;
+		}
+
+
+	/** HEADINGS **/
+	.page-box {
+		margin: 2.5em 4em;
+		color: $third-color;
+	}
+	.section-title {
+		font-family: $primary-font;
+		font-size: 100px;
+		text-align: center;
+	}
+
+	.section-title-blue {
+		color: $secondary-color;
+	}
+	.section-title-red {
+		color: $primary-color;
+	}
+
+	.secondary-title {
+		font-family: $primary-font;
+		font-size: 62px;
+		text-align: center;
+	}
+
+	.page-heading {
+		display: inline-block;
+		margin-top: 0.3em;
+		font-family: $primary-font;
+		font-size: 3.5em;
+		&:nth-of-type(odd) {
+			border-bottom:2px solid $secondary-color;
+		}
+		&:nth-of-type(even) {
+			border-bottom:2px solid $primary-color;
+			margin-top: 0;
+		}
+	}
+
+	.page-description {
+		padding: 1.5em 3em;
+		font-family: $secondary-font;
+		font-size: 20px;
+		text-indent: 2em;
+	}
+	.colored-borders {
+		margin: 0 auto;
+		position: relative;
+		max-width: 950px;
+		&:after {
+			  background: linear-gradient(to right, $primary-color 25%,$secondary-color 25%,$secondary-color 50%, $secondary-color 50%, $secondary-color 75%, $secondary-color 75%);
+			  position: absolute;
+			  content: '';
+			  height: 2px;
+			  right: 0;
+			  left: 0;
+			  top: 0;
+			  opacity: 0.8;
+		}
+		&:before {
+			  background: linear-gradient(to right, $primary-color 25%,$secondary-color 25%,$secondary-color 50%, $secondary-color 50%, $secondary-color 75%, $secondary-color 75%);
+			  position: absolute;
+			  content: '';
+			  height: 2px;
+			  right: 0;
+			  left: 0;
+			  bottom: 0;
+			  opacity: 0.8;
+
+		}
+	}
+	/** LISTS **/
+		ul {
+			font-family: $secondary-font;
+
+		}
+		.colored-list {
+			ul {
+				li:nth-of-type(even) {
+					&:before {
+					   content: '\25CB ' !important;
+					   color: $primary-color;
+					   padding-left: 5em !important;	
+					}
+				}
+				li:nth-of-type(odd) {
+					&:before {
+					   content: '\25CB ' !important;
+					   color: $primary-color;
+					   padding-left: 5em !important;	
+					}
+				}
+			}
+		}
+		.colored-list li:nth-of-type(even) {
+			list-style-type: none;
+			&:before {
+			   content: '\25CB ';
+			   color: $primary-color;
+			   padding-right: 0.5em;			
+			}
+		}
+		.colored-list li:nth-of-type(odd) {
+			list-style-type: none;
+			&:before {
+			   content: '\25CB ';
+			   color: $secondary-color;
+			   padding-right: 0.5em;			
+			}
+
+		}
+
+	/** IMAGES **/
+
+	.logo {
+		display: block;
+		width: 288px;
+		margin: 0 auto;
+	}
+
+	/** BUTTONS **/
+	button {
+		display: block;
+		padding: 1em 2em;
+		border:none;
+		background: $fourth-color;
+		color: $third-color;
+	}
+
+	/** LINKS **/
+	a {
+		text-decoration: none;
+		color: $fourth-color;
+	}
+
+
+
+
+/**** DESKTOP NAVIGATION ****/
+	.nav-block {
+		position: fixed;
+		left: 0;
+		bottom: 0;
+		top: 0;
+		width: 285px;
+		height: 100%;
+		background-color: $third-color;
+	}
+	.desktop-menu {
+		list-style-type: none;
+		font-family: $primary-font;
+		font-size: 3em;
+		text-align: left;
+		.desktop-menu-item  {
+			padding: 0 0 25px 25px ;
+			&:first-child a {
+				padding: 0;
+				text-align: center;
+				margin-bottom: 1.5em;
+				color: $alt-primary-color;
+			}
+			&:nth-child(odd) a {
+				color: $alt-primary-color ;
+			}
+			&:nth-child(even) a {
+				color: $secondary-color ;
+			}
+		}
+	}
+	.active {
+		width: 42px;
+		height: 42px;
+		float: right;
+		margin-top: 10px;
+	}
+
+
+
+/**** MOBILE NAVIGATION ****/
+
+
+/**** HOME PAGE ****/
+
+
+/**** ABOUT PAGE ****/
+	.about-section {
+			.page-description {
+				padding: .5em 3em 1.5em 3em;
+			}
+	}
+	.qualities-list-container {
+		padding: 20px 0;
+		font-size: 20px;
+		.test {
+			float: right;
+			padding-right: 3em;
+		}
+}
+
+/**** HOMEWORK PAGE ****/
+.dmacc-classes {
+	text-align: center;
+	.list-box { /*Centers list*/
+		display: inline-block;
+		margin: 0 auto;
+		text-align: left;
+	}
+}
+.dmacc-classes-active {
+	.page-heading {
+		border-bottom: 2px solid $primary-color;
+	}
+	ul a {
+		color: $third-color;
+	}
+}
+.dmacc-classes-inactive {
+	ul a {
+		color: grey;
+	}
+}
+.dmacc-class-id {
+	color: $primary-color;
+}
+.dmacc-class-descrip {
+	color: $secondary-color;
+}
+/**** RESUME PAGE ****/
+
+.resume-btn {
+	margin: 1em auto 0 auto;
+	border-radius: 0.2em;
+	cursor: pointer;
+}
+
+.education-list {
+	list-style-type: none;
+	font-size: 20px;
+
+}
+
+.skills-list-container {
+	  position:relative;
+	  display: inline-block;  
+	  list-style: none;
+	  width:100%;
+	  margin: auto;
+}
+
+
+.experience-list-item-lead {
+	font-weight: bold;
+	font-size: 20px;
+}
+
+.experience-date {
+	font-weight: normal;
+	font-style: italic;
+}
+
+
+/**** PORTFOLIO PAGE ****/
+/**** CONTACT PAGE ****/
+.contact-form {
+	padding-top: 2em;
+	padding-bottom: 2em;
+	label {
+		display: inline-block;
+		font-family: $secondary-font;
+		font-size: 20px;
+		font-weight: bold;
+	}
+	div input[type="text"] {
+		width: 90%;
+		padding: 0.3em .4em;
+		border: 3px solid $secondary-color;
+		outline: none;
+		border-radius: 2px;
+	}
+	.border-red {
+		border: 3px solid $primary-color !important;
+	}
+	textarea {
+		width: 100%;
+		border: 3px solid $primary-color;
+		border-radius: 2px;
+	}
+
+	.btn-group {
+		margin: 0 auto;
+		text-align: center;
+	}
+
+	.form-btn {
+		display: inline-block;
+		margin: 1em 0;
+		border: 3px solid $third-color;
+		border-radius: 25px;
+		font-size: .8em;
+		font-weight: bold;
+		color: $third-color;
+		&:hover {
+			cursor: pointer;
+		}
+	}
+	.submit-btn {
+		background: #00E676;
+	}
+
+	.form-error {
+		display: block;
+		color: $fourth-color;
+		text-shadow: 1px 1px black;
+		font-family: $secondary-font;
+		font-size: 1em;
+		font-weight: bold;
+	}
+
+}
