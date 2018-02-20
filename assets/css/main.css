@@ -4,7 +4,7 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700");
 @font-face {
   font-family: 'Starway', cursive;
-  src: url("../fonts/starway/starway-webfont.woff2") format("woff2"), url("../fonts/starway/starway-webfont.woff") format("woff");
+  src: url("../fonts/starway-webfont.ttf") format("ttf"), url("../fonts/starway-webfont.woff") format("woff"), url("../fonts/starway-webfont.woff2") format("woff2");
   font-weight: normal;
   font-style: normal; }
 
@@ -75,7 +75,7 @@ html {
   color: #2A2D34; }
 
 .section-title {
-  font-family: "Starway";
+  font-family: "Starway", cursive;
   font-size: 100px;
   text-align: center; }
 
@@ -86,14 +86,14 @@ html {
   color: #FF6A6A; }
 
 .secondary-title {
-  font-family: "Starway";
+  font-family: "Starway", cursive;
   font-size: 62px;
   text-align: center; }
 
 .page-heading {
   display: inline-block;
   margin-top: 0.3em;
-  font-family: "Starway";
+  font-family: "Starway", cursive;
   font-size: 3.5em; }
   .page-heading:nth-of-type(odd) {
     border-bottom: 2px solid #00A7E0; }
@@ -195,7 +195,7 @@ a {
 
 .desktop-menu {
   list-style-type: none;
-  font-family: "Starway";
+  font-family: "Starway", cursive;
   font-size: 3em;
   text-align: left; }
   .desktop-menu .desktop-menu-item {
@@ -248,7 +248,7 @@ a {
   .mobile-menu a {
     display: block;
     text-decoration: none;
-    font-family: "Starway";
+    font-family: "Starway", cursive;
     font-size: 3em;
     -webkit-transition: 0.3s;
     -o-transition: 0.3s;
@@ -275,7 +275,7 @@ a {
   .mobile-nav h1 {
     display: inline-block;
     margin-left: 10px;
-    font-family: "Starway";
+    font-family: "Starway", cursive;
     font-size: 3em;
     color: #FF0F0F; }
   .mobile-nav .open-hamburger-menu {
@@ -285,10 +285,12 @@ a {
     .mobile-nav .open-hamburger-menu:hover {
       cursor: pointer; }
 
-/**** HOME PAGE ****/
 /**** ABOUT PAGE ****/
-.about-section .page-description {
-  padding: .5em 3em 1.5em 3em; }
+.about-section {
+  margin: 0 auto;
+  text-align: center; }
+  .about-section .page-description {
+    padding: .5em 3em 1.5em 3em; }
 
 .qualities-list-container {
   padding: 20px 0;

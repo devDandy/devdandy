@@ -5,16 +5,17 @@
 	
 
 		/* FONTS */
-
 			@font-face {
 			    font-family: 'Starway', cursive;
-			    src: url('../fonts/starway/starway-webfont.woff2') format('woff2'),
-			         url('../fonts/starway/starway-webfont.woff') format('woff');
+			    src: url("../fonts/starway-webfont.ttf") format("ttf"),
+			    	 url("../fonts/starway-webfont.woff") format("woff"),
+			         url("../fonts/starway-webfont.woff2") format("woff2");
 			    font-weight: normal;
 			    font-style: normal;
 			}
 			 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
-			$primary-font: 'Starway';
+			
+			$primary-font: 'Starway', cursive;
 			$secondary-font: 'Open Sans', sans-serif;;
 
 
@@ -323,14 +324,16 @@
 	}
 }
 
-/**** HOME PAGE ****/
 
 
 /**** ABOUT PAGE ****/
 	.about-section {
+		margin: 0 auto;
+		text-align: center;
 			.page-description {
 				padding: .5em 3em 1.5em 3em;
 			}
+
 	}
 	.qualities-list-container {
 		padding: 20px 0;
@@ -340,6 +343,7 @@
 			padding-right: 3em;
 		}
 }
+
 
 /**** HOMEWORK PAGE ****/
 .dmacc-classes {
