@@ -5,32 +5,43 @@
 	<link rel="stylesheet" type="text/css" href="assets/css/main.css">
 </head>
 <body>
+			<nav>
+				<div class="nav-block">
+						<ul class="desktop-menu">
+							<li class="desktop-menu-item ">
+								<a href="index.php"><span class="section-title-blue">dev</span>Dandy</a>
+								<img class="active" src="assets/img/png/popsicle-right.png">
+							</li>
+							<li class="desktop-menu-item"><a class="desktop-menu-item-link" href="homework/homework.html">HW</a></li>
+							<li class="desktop-menu-item"><a class="desktop-menu-item-link" href="about.html">About</a></li>
+							<li class="desktop-menu-item"><a class="desktop-menu-item-link" href="resume.html">Resume</a></li>
+							<li class="desktop-menu-item"><a class="desktop-menu-item-link" href="portfolio.html">Portfolio</a></li>
+							<li class="desktop-menu-item"><a class="desktop-menu-item-link" href="contact.php">Contact</a></li>
+						</ul>
+						<ul class="desktop-social-media">
+							<li><a href="https://github.com/devdandy"><img src="assets/img/png/github.png" title="Dan Schneider's Github" alt="Dan's GitHub"></a></li>
+							<li><a href="https://www.linkedin.com/in/dan-schneider1/"><img src="assets/img/png/linkedin.png" title="Dan Schneider's Linkedin" alt="Dan's Linkedin"></a></li>
+							<li><a href="https://twitter.com/dev_dandy"><img src="assets/img/png/twitter.png" title="Dan Schneider's Twitter" alt="Dan's twitter."></a></li>
+						</ul>
 
-<!-- 	<div class="row">
- -->		<!-- <div class="col-2"> -->
-			<div class="nav-block">
-				<nav>
-					<ul class="desktop-menu">
-						<li class="desktop-menu-item ">
-							<a href="index.php"><span class="section-title-blue">dev</span>Dandy</a>
-							<img class="active" src="assets/img/png/popsicle-right.png">
-						</li>
-						<li class="desktop-menu-item"><a class="desktop-menu-item-link" href="homework/homework.html">HW</a></li>
-						<li class="desktop-menu-item"><a class="desktop-menu-item-link" href="about.html">About</a></li>
-						<li class="desktop-menu-item"><a class="desktop-menu-item-link" href="resume.html">Resume</a></li>
-						<li class="desktop-menu-item"><a class="desktop-menu-item-link" href="portfolio.html">Portfolio</a></li>
-						<li class="desktop-menu-item"><a class="desktop-menu-item-link" href="contact.php">Contact</a></li>
-					</ul>
-					<ul class="desktop-social-media">
-						<li>Github</li>
-						<li>Twitter</li>
-						<li>Linkedin</li>
-					</ul>
+					</div>
+						<div  class="mobile-nav">
+							<a href="#" class="nav-header"><h1><span class="section-title-blue">dev</span>Dandy</h1></a>
+							<span onclick="openNav()" class="open-hamburger-menu">
+								<img src="assets/img/png/menu.png">
+
+							</span>
+						</div>
+						<div class="mobile-menu" id="mobile-menu">
+  							<a href="javascript:void(0)" class="close-btn" onclick="closeNav()"> &times; </a>
+							<a href="index.php"><h1>devDandy</h1></a> 
+							<a href="homework/homework.html">Homework</a> 
+							<a href="about.html">About</a>
+							<a href="resume.html">Resume</a> 
+							<a href="portfolio.html">Portfolio</a> 
+							<a href="contact.php">Contact</a>
+						</div>
 				</nav>
-			</div>
-		<!-- </div> -->
-
-		<!-- <div class="col-10"> -->
 			<div class="container">
 				<div class="page-box">
 
@@ -50,8 +61,6 @@
 					<p>View me on Linkedin</p>
 				</div>
 			</div>
-		<!-- </div> -->
-<!-- 	</div>
- -->
+<script src="assets/js/main.js"></script>
 </body>
 </html>
