@@ -77,7 +77,8 @@ html {
 .section-title {
   font-family: "Starway", cursive;
   font-size: 100px;
-  text-align: center; }
+  text-align: center;
+  white-space: nowrap; }
 
 .section-title-blue {
   color: #00A7E0; }
@@ -236,11 +237,11 @@ a {
   /* Stay at the top */
   left: 0;
   background: #2A2D34;
-  opacity: 0.9;
+  opacity: .9;
   overflow-x: hidden;
   /* Disable horizontal scroll */
-  padding-top: 60px;
-  /* Place content 60px from the top */
+  padding-top: 50%;
+  /* Place content 50% from the top */
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
@@ -290,12 +291,15 @@ a {
   margin: 0 auto;
   text-align: center; }
   .about-section .page-description {
-    padding: .5em 3em 1.5em 3em; }
+    padding: .5em 3em 1.5em 3em;
+    text-align: left; }
 
 .qualities-list-container {
+  display: inline-block;
   padding: 20px 0;
-  font-size: 20px; }
-  .qualities-list-container .test {
+  font-size: 20px;
+  text-align: left; }
+  .qualities-list-container .qualities-list-alignment {
     float: right;
     padding-right: 3em; }
 
@@ -464,6 +468,29 @@ a {
     font-weight: bold; }
 
 /* MEDIA QUERIES */
+@media only screen and (max-width: 1025px) {
+  .section-title {
+    font-size: 75px; }
+  .secondary-title {
+    font-size: 35px;
+    white-space: nowrap; }
+  .qualities-list-container {
+    font-size: 16px; }
+  .qualities-list-container .qualities-list-alignment {
+    float: none;
+    padding-right: 0; } }
+
+@media only screen and (max-width: 836px) {
+  .qualities-list-container {
+    width: 100%;
+    padding: 0;
+    font-size: 16px;
+    text-align: center; }
+    .qualities-list-container ul {
+      width: 250px;
+      display: inline-block;
+      text-align: left; } }
+
 @media only screen and (max-width: 795px) {
   .nav-block {
     display: none; }
@@ -474,3 +501,28 @@ a {
     display: block; }
   .section-title {
     font-size: 75px; } }
+
+@media only screen and (max-width: 600px) {
+  .logo {
+    width: 75%; }
+  .section-title {
+    font-size: 50px; }
+  .page-description {
+    padding: 1em 1em;
+    font-size: 16px; } }
+
+@media only screen and (max-width: 500px) {
+  .page-box {
+    margin: 0 2em; }
+  .page-description {
+    padding: 0.5em 0.2em;
+    text-indent: 0; }
+  .secondary-title {
+    font-size: 30px;
+    white-space: normal; } }
+
+@media only screen and (max-width: 360px) {
+  .section-title {
+    font-size: 45px; }
+  .page-description {
+    font-size: 15px; } }
