@@ -128,6 +128,7 @@
 		margin: 0 auto;
 		position: relative;
 		max-width: 950px;
+		padding: 15px 0;
 		&:after {
 			  background: linear-gradient(to right, $primary-color 25%,$secondary-color 25%,$secondary-color 50%, $secondary-color 50%, $secondary-color 75%, $secondary-color 75%);
 			  position: absolute;
@@ -260,7 +261,10 @@
 		li {
 			display: inline-block;
 			margin: 2em 0.5em 0 0.5em;
+			border-radius: 5px;
+
 		}
+
 	}
 
 
@@ -380,7 +384,7 @@
 /**** RESUME PAGE ****/
 
 .resume-btn {
-	margin: 1em auto 0 auto;
+	margin: 0 auto;
 	border-radius: 0.2em;
 	cursor: pointer;
 }
@@ -499,7 +503,7 @@
 		border: 3px solid $primary-color !important;
 	}
 	textarea {
-		width: 100%;
+		width: 95%;
 		border: 3px solid $primary-color;
 		border-radius: 2px;
 	}
@@ -554,7 +558,22 @@
    		float: none;
    		padding-right: 0;
    	}
+   	// Resume Page
+   	.education-list .col-6  {
+   		width: 100%;
+   	}
+   	.skills-list-container .col-2 {
+   		width: 100%;
+   	}
    }
+
+ 
+ @media only screen and (max-width: 921px) {
+ 	.experience-list-item ul li {
+ 		font-size: 12px;
+ 	}
+ }
+
 
  @media only screen and (max-width: 836px) {
    	.qualities-list-container {
@@ -607,6 +626,10 @@
   	.secondary-title {
 		font-size: 30px;
 		white-space: normal;
+	}
+	/* Contact Page */
+	.contact-form .col-6 {
+		width: 100%;
 	}
  }
 
