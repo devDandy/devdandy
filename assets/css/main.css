@@ -24,6 +24,9 @@ html {
   margin-left: 285px;
   /* Same as the navbar width*/ }
 
+p {
+  font-family: "Open Sans", sans-serif; }
+
 /** PAGE LAYOUT **/
 .row::after {
   content: "";
@@ -424,6 +427,91 @@ a {
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     text-align: center; }
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  padding-top: 100px;
+  /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: #00a7e0;
+  /* Fallback color */
+  background-color: rgba(0, 167, 224, 0.5);
+  /* Black w/ opacity */ }
+
+/* Modal Content */
+.modal-content {
+  width: 735px;
+  height: 535px;
+  background-color: #fefefe;
+  margin: auto;
+  border-radius: 15px;
+  overflow: scroll;
+  overflow-x: hidden; }
+  .modal-content h3 {
+    font-family: "Open Sans", sans-serif;
+    font-size: 27px; }
+
+.modal-content-header {
+  height: 125px;
+  background: #FF6A6A;
+  padding: 20px; }
+  .modal-content-header h2 {
+    font-family: "Open Sans", sans-serif;
+    font-size: 65px;
+    color: white; }
+
+.modal-content-description {
+  margin: 15px 0; }
+
+.modal-content-description-lead {
+  padding: 5px 20px;
+  text-align: left; }
+
+.modal-content-description-img {
+  width: 405px;
+  padding: 25px 0; }
+
+.modal-content-description-tech-group {
+  padding-top: 10px; }
+
+.modal-content-description-tech-icon {
+  width: 64px;
+  height: 73.19px;
+  margin-left: 24px; }
+
+.modal-content-description-objectives-container {
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto; }
+  .modal-content-description-objectives-container ul {
+    list-style-position: inside;
+    text-align: left; }
+
+/* The Close Button */
+.close {
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold; }
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer; }
 
 /**** CONTACT PAGE ****/
 .contact-form {
