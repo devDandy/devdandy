@@ -486,13 +486,14 @@
 
 	}
 
-	/* The Modal (background) */
+	/* The Modal */
 
 	#openPortfolio1, #openPortfolio3, #openPortfolio5, #openPortfolio7 {
 		background-color: $primary-color;
 		&:hover {
 			background-color: $third-color;
 		}
+
 	}
 	#openPortfolio2, #openPortfolio4, #openPortfolio6, #openPortfolio8 {
 		background-color: $secondary-color;
@@ -500,6 +501,8 @@
 			background-color: $third-color;
 		}
 	}
+	/* The modal's background */
+
 	.modal {
 	    display: none; /* Hidden by default */
 	    position: fixed; /* Stay in place */
@@ -514,29 +517,31 @@
 	}
 
 	/* Modal Content */
+	.modal-content-header {
+		width: 735px; /* This must match the .modal-content class */
+		//height: 125px;
+		margin: 0 auto;
+		padding: 20px;
+		background: $third-color; /*Fallback color refer to the top of the modal section to change colors */
+		h2 {
+			font-family: $secondary-font ;
+			font-size: 45px;
+			color: white;
+		}
+	}
 	.modal-content {
-		width: 735px;
+		width: 735px; /* This must match the .modal-content-header class */
 		height: 535px;
 	    background-color: #fefefe;
 	    margin: auto;
-	    border-radius: 15px;
-	    overflow: scroll;
+	    overflow: auto;
 	    overflow-x: hidden;
 		h3 {
 			font-family: $secondary-font;
 			font-size: 27px;
 		}
 	}
-	.modal-content-header {
-		height: 125px;
-		background: $primary-color;
-		padding: 20px;
-		h2 {
-			font-family: $secondary-font ;
-			font-size: 65px;
-			color: white;
-		}
-	}
+
 	.modal-content-description {
 		margin: 15px 0;
 
@@ -554,7 +559,8 @@
 		}
 	.modal-content-description-tech-icon {
 			width: 64px;
-			height: 73.19px;
+			/* height: 73.19px; */
+			height: auto;
 			margin-left: 24px;
 		}
 	.modal-content-description-objectives-container {

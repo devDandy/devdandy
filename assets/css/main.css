@@ -429,7 +429,7 @@ a {
     -ms-transform: translate(-50%, -50%);
     text-align: center; }
 
-/* The Modal (background) */
+/* The Modal */
 #openPortfolio1, #openPortfolio3, #openPortfolio5, #openPortfolio7 {
   background-color: #FF6A6A; }
   #openPortfolio1:hover, #openPortfolio3:hover, #openPortfolio5:hover, #openPortfolio7:hover {
@@ -440,6 +440,7 @@ a {
   #openPortfolio2:hover, #openPortfolio4:hover, #openPortfolio6:hover, #openPortfolio8:hover {
     background-color: #2A2D34; }
 
+/* The modal's background */
 .modal {
   display: none;
   /* Hidden by default */
@@ -461,26 +462,29 @@ a {
   /* Black w/ opacity */ }
 
 /* Modal Content */
+.modal-content-header {
+  width: 735px;
+  /* This must match the .modal-content class */
+  margin: 0 auto;
+  padding: 20px;
+  background: #2A2D34;
+  /*Fallback color refer to the top of the modal section to change colors */ }
+  .modal-content-header h2 {
+    font-family: "Open Sans", sans-serif;
+    font-size: 45px;
+    color: white; }
+
 .modal-content {
   width: 735px;
+  /* This must match the .modal-content-header class */
   height: 535px;
   background-color: #fefefe;
   margin: auto;
-  border-radius: 15px;
-  overflow: scroll;
+  overflow: auto;
   overflow-x: hidden; }
   .modal-content h3 {
     font-family: "Open Sans", sans-serif;
     font-size: 27px; }
-
-.modal-content-header {
-  height: 125px;
-  background: #FF6A6A;
-  padding: 20px; }
-  .modal-content-header h2 {
-    font-family: "Open Sans", sans-serif;
-    font-size: 65px;
-    color: white; }
 
 .modal-content-description {
   margin: 15px 0; }
@@ -498,7 +502,8 @@ a {
 
 .modal-content-description-tech-icon {
   width: 64px;
-  height: 73.19px;
+  /* height: 73.19px; */
+  height: auto;
   margin-left: 24px; }
 
 .modal-content-description-objectives-container {
