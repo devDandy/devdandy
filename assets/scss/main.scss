@@ -6,16 +6,16 @@
 
 		/* FONTS */
 			@font-face {
-			    font-family: 'Starway', cursive;
+			    font-family: 'Starway';
 			    src: url("../fonts/starway-webfont.ttf") format("ttf"),
 			    	 url("../fonts/starway-webfont.woff") format("woff"),
 			         url("../fonts/starway-webfont.woff2") format("woff2");
 			    font-weight: normal;
 			    font-style: normal;
 			}
-			 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+			@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
 			
-			$primary-font: 'Starway', cursive;
+			$primary-font: 'Starway';
 			$secondary-font: 'Open Sans', sans-serif;;
 
 
@@ -157,7 +157,6 @@
 	/** LISTS **/
 		ul {
 			font-family: $secondary-font;
-
 		}
 		.colored-list {
 			ul {
@@ -208,8 +207,11 @@
 		display: block;
 		padding: 1em 2em;
 		border:none;
-		background: $fourth-color;
-		color: $third-color;
+		background: $primary-color;
+		color: white;
+		&:hover {
+			background-color: $secondary-color;
+		}
 	}
 
 	/** LINKS **/
@@ -283,7 +285,6 @@
 	background: $third-color;
 	opacity: .9;    
 	overflow-x: hidden; /* Disable horizontal scroll */
-    padding-top: 50%; /* Place content 50% from the top */
     transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
     a {
 	    display: block;
@@ -449,7 +450,6 @@
 			background: $secondary-color;
 		}
 		&:hover {
-			background: $fourth-color;
 			cursor: pointer;
 			border-top: 5px solid $primary-color;
 			border-right: 5px solid $primary-color;
@@ -507,7 +507,7 @@
 	    display: none; /* Hidden by default */
 	    position: fixed; /* Stay in place */
 	    z-index: 1; /* Sit on top */
-	    padding-top: 100px; /* Location of the box */
+	    padding-top: 50px; /* Location of the box */
 	    left: 0;
 	    top: 0;
 	    width: 100%; /* Full width */
@@ -568,8 +568,36 @@
 		margin-left: auto;
 		margin-right: auto;
 		ul {
-			list-style-position: inside;
 			text-align: left;
+			li {
+				list-style: none;
+				padding-bottom: 5px;
+				&:before {
+					content: "";
+					position: relative;
+					top: 7px;
+					right: 5px;
+					width: 25px;
+					height: 25px;
+					display: inline-block;
+					background: url("../img/png/popsicle-left.png") CENTER NO-REPEAT;
+					background-size: contain;
+				}
+			}
+		}
+		.modal-content-description-objectives-item {
+			// padding-top: 15px;
+		}
+	}
+	.modal-content-btn-group {
+		button {
+			display: inline-block;
+			padding: 10px;
+			border-radius: 5px;
+			&:hover {
+				background-color: $secondary-color;
+				cursor: pointer;
+			}
 		}
 	}
 	/* The Close Button */
@@ -597,51 +625,53 @@
 		font-size: 20px;
 		font-weight: bold;
 	}
-	div input[type="text"] {
+	.input-container {
+
+		.form-error {
+			float: right;
+			padding-top: 5px;
+			padding-right: 10%; /* This is because input[type="text"] width is 90% and these MUST match to 100 or else error will be formated weird */
+		 	font-family: 'Open Sans:700', sans-serif;
+			font-size:15px;
+			font-style: italic;
+	 		color: $alt-primary-color;
+		}
+	}
+	 input[type="text"] {
 		width: 90%;
 		padding: 0.3em .4em;
 		border: 3px solid $secondary-color;
 		outline: none;
 		border-radius: 2px;
 	}
-	.border-red {
-		border: 3px solid $primary-color !important;
-	}
+
 	textarea {
 		width: 95%;
 		border: 3px solid $primary-color;
 		border-radius: 2px;
+		font-family: $secondary-font;
 	}
 
 	.btn-group {
 		margin: 0 auto;
 		text-align: center;
+		padding-right: 5%; /*Centering things, this HAS to change if input[type="text"]'s width and .form-error's padding-right 10% */
 	}
 
 	.form-btn {
 		display: inline-block;
 		margin: 1em 0;
-		border: 3px solid $third-color;
+		border: 3px solid $secondary-color;
 		border-radius: 25px;
+		background-color: $primary-color;
 		font-size: .8em;
-		font-weight: bold;
-		color: $third-color;
+		color: white;
 		&:hover {
+			font-weight: bold;
 			cursor: pointer;
 		}
 	}
-	.submit-btn {
-		background: #00E676;
-	}
 
-	.form-error {
-		display: block;
-		color: $fourth-color;
-		text-shadow: 1px 1px black;
-		font-family: 'Open Sans:700', sans-serif;
-		font-size: 1em;
-		font-weight: bold;
-	}
 
 }
 
@@ -670,6 +700,21 @@
    	.skills-list-container .col-2 {
    		width: 100%;
    	}
+   	//Contact Page
+
+	.contact-form .col-6 {
+		width: 100%;
+		input[type="text"] {
+			width: 100%;
+		}
+		.form-error {
+			padding-right: 0;
+		}
+
+	}
+	.contact-form textarea {
+		width: 100%;
+	}
    }
 
  
@@ -695,13 +740,13 @@
  }
  @media only screen and (max-width: 795px) {
  	.nav-block {
- 		display: none;
+ 		display: none; /*Desktop nav disappears*/
  	}
 	.container {
 		margin-left: 0; /* Resets the container to make it center*/
 	}
 	.mobile-nav {
-		display: block;
+		display: block; /*Mobile nav appears*/
 	}
 	.section-title {
 		font-size: 75px;

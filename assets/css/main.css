@@ -3,7 +3,7 @@
 /* FONTS */
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700");
 @font-face {
-  font-family: 'Starway', cursive;
+  font-family: 'Starway';
   src: url("../fonts/starway-webfont.ttf") format("ttf"), url("../fonts/starway-webfont.woff") format("woff"), url("../fonts/starway-webfont.woff2") format("woff2");
   font-weight: normal;
   font-style: normal; }
@@ -78,7 +78,7 @@ p {
   color: #2A2D34; }
 
 .section-title {
-  font-family: "Starway", cursive;
+  font-family: "Starway";
   font-size: 100px;
   text-align: center;
   white-space: nowrap; }
@@ -90,14 +90,14 @@ p {
   color: #FF6A6A; }
 
 .secondary-title {
-  font-family: "Starway", cursive;
+  font-family: "Starway";
   font-size: 62px;
   text-align: center; }
 
 .page-heading {
   display: inline-block;
   margin-top: 0.3em;
-  font-family: "Starway", cursive;
+  font-family: "Starway";
   font-size: 3.5em; }
   .page-heading:nth-of-type(odd) {
     border-bottom: 2px solid #00A7E0; }
@@ -180,8 +180,10 @@ button {
   display: block;
   padding: 1em 2em;
   border: none;
-  background: #FFDC00;
-  color: #2A2D34; }
+  background: #FF6A6A;
+  color: white; }
+  button:hover {
+    background-color: #00A7E0; }
 
 /** LINKS **/
 a {
@@ -200,7 +202,7 @@ a {
 
 .desktop-menu {
   list-style-type: none;
-  font-family: "Starway", cursive;
+  font-family: "Starway";
   font-size: 3em;
   text-align: left; }
   .desktop-menu .desktop-menu-item {
@@ -245,8 +247,6 @@ a {
   opacity: .9;
   overflow-x: hidden;
   /* Disable horizontal scroll */
-  padding-top: 50%;
-  /* Place content 50% from the top */
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
@@ -254,7 +254,7 @@ a {
   .mobile-menu a {
     display: block;
     text-decoration: none;
-    font-family: "Starway", cursive;
+    font-family: "Starway";
     font-size: 3em;
     -webkit-transition: 0.3s;
     -o-transition: 0.3s;
@@ -281,7 +281,7 @@ a {
   .mobile-nav h1 {
     display: inline-block;
     margin-left: 10px;
-    font-family: "Starway", cursive;
+    font-family: "Starway";
     font-size: 3em;
     color: #FF0F0F; }
   .mobile-nav .open-hamburger-menu {
@@ -397,7 +397,6 @@ a {
   .portfolio-box:nth-of-type(odd) {
     background: #00A7E0; }
   .portfolio-box:hover {
-    background: #FFDC00;
     cursor: pointer;
     border-top: 5px solid #FF6A6A;
     border-right: 5px solid #FF6A6A;
@@ -448,7 +447,7 @@ a {
   /* Stay in place */
   z-index: 1;
   /* Sit on top */
-  padding-top: 100px;
+  padding-top: 50px;
   /* Location of the box */
   left: 0;
   top: 0;
@@ -511,8 +510,28 @@ a {
   margin-left: auto;
   margin-right: auto; }
   .modal-content-description-objectives-container ul {
-    list-style-position: inside;
     text-align: left; }
+    .modal-content-description-objectives-container ul li {
+      list-style: none;
+      padding-bottom: 5px; }
+      .modal-content-description-objectives-container ul li:before {
+        content: "";
+        position: relative;
+        top: 7px;
+        right: 5px;
+        width: 25px;
+        height: 25px;
+        display: inline-block;
+        background: url("../img/png/popsicle-left.png") CENTER NO-REPEAT;
+        background-size: contain; }
+
+.modal-content-btn-group button {
+  display: inline-block;
+  padding: 10px;
+  border-radius: 5px; }
+  .modal-content-btn-group button:hover {
+    background-color: #00A7E0;
+    cursor: pointer; }
 
 /* The Close Button */
 .close {
@@ -536,40 +555,42 @@ a {
     font-family: "Open Sans", sans-serif;
     font-size: 20px;
     font-weight: bold; }
-  .contact-form div input[type="text"] {
+  .contact-form .input-container .form-error {
+    float: right;
+    padding-top: 5px;
+    padding-right: 10%;
+    /* This is because input[type="text"] width is 90% and these MUST match to 100 or else error will be formated weird */
+    font-family: 'Open Sans:700', sans-serif;
+    font-size: 15px;
+    font-style: italic;
+    color: #FF0F0F; }
+  .contact-form input[type="text"] {
     width: 90%;
     padding: 0.3em .4em;
     border: 3px solid #00A7E0;
     outline: none;
     border-radius: 2px; }
-  .contact-form .border-red {
-    border: 3px solid #FF6A6A !important; }
   .contact-form textarea {
     width: 95%;
     border: 3px solid #FF6A6A;
-    border-radius: 2px; }
+    border-radius: 2px;
+    font-family: "Open Sans", sans-serif; }
   .contact-form .btn-group {
     margin: 0 auto;
-    text-align: center; }
+    text-align: center;
+    padding-right: 5%;
+    /*Centering things, this HAS to change if input[type="text"]'s width and .form-error's padding-right 10% */ }
   .contact-form .form-btn {
     display: inline-block;
     margin: 1em 0;
-    border: 3px solid #2A2D34;
+    border: 3px solid #00A7E0;
     border-radius: 25px;
+    background-color: #FF6A6A;
     font-size: .8em;
-    font-weight: bold;
-    color: #2A2D34; }
+    color: white; }
     .contact-form .form-btn:hover {
+      font-weight: bold;
       cursor: pointer; }
-  .contact-form .submit-btn {
-    background: #00E676; }
-  .contact-form .form-error {
-    display: block;
-    color: #FFDC00;
-    text-shadow: 1px 1px black;
-    font-family: 'Open Sans:700', sans-serif;
-    font-size: 1em;
-    font-weight: bold; }
 
 /* MEDIA QUERIES */
 @media only screen and (max-width: 1025px) {
@@ -586,6 +607,14 @@ a {
   .education-list .col-6 {
     width: 100%; }
   .skills-list-container .col-2 {
+    width: 100%; }
+  .contact-form .col-6 {
+    width: 100%; }
+    .contact-form .col-6 input[type="text"] {
+      width: 100%; }
+    .contact-form .col-6 .form-error {
+      padding-right: 0; }
+  .contact-form textarea {
     width: 100%; } }
 
 @media only screen and (max-width: 921px) {
@@ -605,12 +634,14 @@ a {
 
 @media only screen and (max-width: 795px) {
   .nav-block {
-    display: none; }
+    display: none;
+    /*Desktop nav disappears*/ }
   .container {
     margin-left: 0;
     /* Resets the container to make it center*/ }
   .mobile-nav {
-    display: block; }
+    display: block;
+    /*Mobile nav appears*/ }
   .section-title {
     font-size: 75px; } }
 
