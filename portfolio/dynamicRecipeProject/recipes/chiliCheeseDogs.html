@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title> Chili-Cheese Dogs - Cookin' With Carl</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="../assets/css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico|Roboto|Zilla+Slab" rel="stylesheet">
+    <script src="../assets/js/jquery-3.2.1.js"></script>
+    <script src="../external.js"></script>
+    <script>
+        $(document).ready(function() {
+
+            var chiliCheeseDogsVisits = getCookie("chiliCheeseDogVisitCounter"); // Gets the cookie into here
+            if (!chiliCheeseDogsVisits) {  // If no cookie then start visits at one
+                    chiliCheeseDogsVisits = 1;
+            } else { // Else add 1
+                chiliCheeseDogsVisits++; //= parseInt(visits) + 1;
+            }
+            setCookie("chiliCheeseDogVisitCounter", chiliCheeseDogsVisits, 3); // Sets the cookie with an expiration time of 3 days 
+
+
+
+            //**** HIDE SERVINGS****\\
+        $( "#hideServing" ).click(function() {
+              $( "#hideServingContent" ).hide();
+              $("#hideServing").css("background", "#17a2b8");
+              $("#showServing").css("background", "white");
+        });
+        $( "#showServing" ).click(function() {
+              $( "#hideServingContent" ).show();
+              $("#hideServing").css("background", "white");
+              $("#showServing").css("background", "#17a2b8");
+        });
+            //**** HIDE Ingredients****\\
+
+            $( "#hideIngredients" ).click(function() {
+                  $( ".ingredientsList" ).hide();
+                  $("#hideIngredients").css("color", "black");
+
+            });
+            $( "#showIngredients" ).click(function() {
+                  $( ".ingredientsList" ).show();
+                  $("#hideIngredients").css("color", "#868e96");
+
+            });
+            //**** HIDE INSTRUCTIONS****\\
+
+            $( "#hideInstructions" ).click(function() {
+                  $( ".instructionsList" ).hide();
+                  $("#hideInstructions").css("color", "black");
+
+            });
+            $( "#showInstructions" ).click(function() {
+                  $( ".instructionsList" ).show();
+                  $("#hideInstructions").css("color", "#868e96");
+
+            });
+
+            $("input[name='radio']").change(function(){
+
+                if($(this).val() == "halfSize"){
+                    $("#serve1").html("2");
+                    $("#serve2").html("1");
+                    $("#serve3").html("8");
+                    $("#serve4").html("8");
+                    $("#serve5").html("16");
+
+                    $("#ingredient1").html("1/2");
+                    $("#ingredient2").html("1/2");
+                    $("#ingredient3").html("1");
+                    $("#ingredient4").html("1/2");
+                    $("#ingredient5").html("1");
+                    $("#ingredient6").html("1/2");
+                    $("#ingredient7").html("1/2")
+                    $("#ingredient8").html("4")
+                    $("#ingredient9").html("1/2")
+                    $("#ingredient10").html("1/2")
+                    $("#ingredient11").html("4")
+                    $("#ingredient12").html("1")
+
+                }
+                if($(this).val() == "regularSize"){
+                    $("#serve1").html("4");
+                    $("#serve2").html("2");
+                    $("#serve3").html("15");
+                    $("#serve4").html("15");
+                    $("#serve5").html("30");
+
+                    $("#ingredient1").html("1");
+                    $("#ingredient2").html("1");
+                    $("#ingredient3").html("2");
+                    $("#ingredient4").html("1");
+                    $("#ingredient5").html("2");
+                    $("#ingredient6").html("1");
+                    $("#ingredient7").html("1")
+                    $("#ingredient8").html("8")
+                    $("#ingredient9").html("1")
+                    $("#ingredient10").html("1")
+                    $("#ingredient11").html("8")
+                    $("#ingredient12").html("2")
+                    
+                }
+                if($(this).val() == "doubleSize"){
+                    $("#serve1").html("8");
+                    $("#serve2").html("4");
+                    $("#serve3").html("30");
+                    $("#serve4").html("30");
+                    $("#serve5").html("60");
+
+                    $("#ingredient1").html("2");
+                    $("#ingredient2").html("2");
+                    $("#ingredient3").html("4");
+                    $("#ingredient4").html("2");
+                    $("#ingredient5").html("4");
+                    $("#ingredient6").html("2");
+                    $("#ingredient7").html("2")
+                    $("#ingredient8").html("16")
+                    $("#ingredient9").html("2")
+                    $("#ingredient10").html("2")
+                    $("#ingredient11").html("16")
+                    $("#ingredient12").html("4")
+                }
+
+            });
+            
+            $("#recipeSize").change(function(){
+
+                var selectedValue = $("#recipeSize").val(); //Grabs value
+
+                if (selectedValue == "halfRecipe") {
+                    $("#serve1").html("3");
+                    $("#serve2").html("less than 5");
+                    $("#serve3").html("20");
+                    $("#serve4").html("25ish");
+
+                    $("#ingredient1").html("1/2");
+                    $("#ingredient2").html("1");
+                    $("#ingredient3").html("1");
+                    $("#ingredient4").html("1");
+                    $("#ingredient5").html("1/2");
+                    $("#ingredient6").html("4");
+                    $("#ingredient7").html("1/2");
+                } 
+
+                if (selectedValue == "regularRecipe") {
+                    $("#serve1").html("6");
+                    $("#serve2").html("5");
+                    $("#serve3").html("20");
+                    $("#serve4").html("25");
+
+                    $("#ingredient1").html("1");
+                    $("#ingredient2").html("2");
+                    $("#ingredient3").html("2");
+                    $("#ingredient4").html("2");
+                    $("#ingredient5").html("1");
+                    $("#ingredient6").html("8");
+                    $("#ingredient7").html("1");
+                }
+                if (selectedValue == "doubleRecipe") {
+                    $("#serve1").html("12");
+                    $("#serve2").html("10");
+                    $("#serve3").html("40");
+                    $("#serve4").html("50");
+
+                    $("#ingredient1").html("2");
+                    $("#ingredient2").html("4");
+                    $("#ingredient3").html("4");
+                    $("#ingredient4").html("4");
+                    $("#ingredient5").html("2");
+                    $("#ingredient6").html("16");
+                    $("#ingredient7").html("2");
+                }
+            });
+        });
+    </script>
+</head>
+
+<body class="bg-light">
+    <div class="row">
+        <div class="col-12">
+            <div class="overlayBG">
+            <div class="jumbotron text-light recipeJumbo">
+    <nav class="navbar navbar-expand-lg navbar-primary ">
+        <a class="navbar-brand" href="../index.html">Cookin' With Carl</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" href="../index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="chiliRecipe.html">Crockpot Chili</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="#" >Chili Cheese Dogs</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="chiliCheeseFries.html">Chili Cheese Fries</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="recipeContents">
+        
+                <h1 class="display-3"> Chili-Cheese Dogs</h1>
+                <p class="lead">It's to die for!</p>
+                <div class="row changeRecipeContainer">
+                    <div class="col-12">
+                        <p class="recipeSizeButton"><input type="radio" name="radio" id="halfSize" value="halfSize">Half-Size</p>
+                        <p class="recipeSizeButton"><input type="radio" name="radio" id="regularSize" value="regularSize">Regular-Size</p>
+                        <p class="recipeSizeButton"><input type="radio" name="radio" id="doubleSize" value="doubleSize">Double-Size</p>    
+                    </div>
+
+                </div>
+                <div class="servingInfo" id="hideServingContent">
+                    <div class="servingIcon">
+                        <img src="../assets/img/cutlery.png">
+                        <h3>Serves</h3>
+                        <p><span id="serve1">4</span> (<span id="serve2">2</span> dogs each)</p>
+                    </div>
+                    <div class="servingIcon">
+                        <img src="../assets/img/rollingPin.png">
+                        <h3>Prep Time</h3>
+                        <p><span id="serve3">15</span> minutes</p>
+                    </div>
+                    <div class="servingIcon"> 
+                        <img src="../assets/img/cooking.png">
+                        <h3>Coooking Time</h3>
+                        <p><span id="serve4">15</span> minutes</p>
+                    </div>
+                    <div class="servingIcon"> 
+                        <img src="../assets/img/hourglass.png">
+                        <h3>Total Time</h3>
+                        <p><span id="serve5">30</span> minutes</p>
+                    </div>
+                    <h3>Level: easy</h3>
+                </div>
+                <div class="buttonContainer">
+                    <button class="displayServingButton" id="hideServing">Hide Servings</button>
+                    <button class="displayServingButton" id="showServing">Show Servings</button>
+                </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+
+
+    <div class="recipeContainer">
+        <div class="row">
+            <div class="col-m-12 imageContainer">
+                <img src="../assets/img/cheesedogs.jpg" class="imgTitle" title="Chili Cheese Dogs" alt="Chili Cheese Dogs">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <section id="chiliIngredients" class="recipeIngredients">
+                    <h3>Ingredients
+                        <span class="hideContent" id="hideIngredients">-</span>
+                        <span class="displayContent" id="showIngredients">+</span>
+                    </h3>
+
+                    <ul class="ingredientsList">
+                        <li><span id="ingredient1">1</span> tablespoon extra-virgin olive oil, 1 turn of the pan</li>
+                        <li><span id="ingredient2">1</span> pound ground sirloin</li>
+                        <li><span id="ingredient3">2</span> teaspoons Worcestershire Sauce -- eyeball it</li>
+                        <li><span id="ingredient4">1</span> small onion, chopped</li>
+                        <li><span id="ingredient5">2</span> cloves of garlic, chopped</li>
+                        <li><span id="ingredient6">1</span> tablespoon chili powder, a palmful</li>
+                        <li><span id="ingredient7">1</span> (8-ounce) can tomato sauce</li>
+                        <li><span id="ingredient8">8</span> fat or foot-long beef franks</li>
+                        <li><span id="ingredient9">1</span> tablespoon hot sauce</li>
+                        <li><span id="ingredient10">1</span> tablespoon butter</li>
+                        <li><span id="ingredient11">8</span> hot dog buns, toasted</li>
+                        <li><span id="ingredient12">2</span> cups shredded Cheddar, <span id="ingredient12">1</span (10-ounce sack)</li>
+                        <li>Salt and Pepper</li>
+                    </ul>
+                </section>
+            </div>
+            <div class="col-6">
+                <section id="chiliInstructions" class="recipeInstructions">
+                    <h3>Instructions
+                            <span class="hideContent" id="hideInstructions">-</span>
+                            <span class="displayContent" id="showInstructions">+</span>
+                    </h3>
+                    <ol class="instructionsList">
+                        <li>Heat a skillet over medium high heat.</li>
+                        <li>Add extra-virgin olive oil and meat and season with salt and pepper.</li>
+                        <li>Brown and crumble beef.</li>
+                        <li>Add Worcestershire, onion, garlic, chili powder and cook together 5 minutes.</li>
+                        <li>Add tomato sauce and reduce heat to low.</li>
+                        <li>Meanwhile, boil franks in shallow pan to warm through, 5 minutes.</li>
+                        <li>Drain water and return pan to medium heat.</li>
+                        <li>Score casings on dogs.</li>
+                        <li>Melt butter in skillet and hot sauce.</li>
+                        <li>Add dogs to pan, browning and crisping the casings in hot sauce and butter.</li>
+                        <li>Place dogs in buns and top with chili and lots of cheese.</li>
+                        <li>Place dogs under broiler and melt cheese.</li>
+                        <li>Serve immediately.</li>
+                    </ol>
+                </section>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-md-12 recommendationHeader">
+                <h1 class="text-center">You may also like:</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-md-6">
+                <a href="chiliRecipe.html">
+                    <h2 class="text-center">Crockpot Chili</h2>
+                    <img class="recommendItems" src="../assets/img/chili.jpg">
+                </a>
+            </div>
+            <div class="col-12 col-md-6">
+                <a href="chiliCheeseFries.html">
+                    <h2 class="text-center"> Chili-Cheese Fries</h2>
+                    <img class="recommendItems" src="../assets/img/cheeseFries.jpg">
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,255 @@
+//***** FONTS *****//
+		@font-face {
+		    font-family: 'Aisha Script';
+		    src: url('../fonts/aisha_script-webfont.woff2') format('woff2'),
+		         url('../fonts/aisha_script-webfont.woff') format('woff');
+		    font-weight: normal;
+		    font-style: normal;
+
+		}
+		@font-face {
+		    font-family: 'Inter-UI';
+		    src: url('../fonts/Inter-UI-Regular.woff2') format('woff2'),
+		         url('../fonts/Inter-UI-Regular.woff1') format('woff');
+		    font-weight: normal;
+		    font-style: normal;
+		}
+//***** GENERAL *****//
+
+	body,html {
+		height: 100%;
+		margin: 0;
+	}
+	.bg {
+		background-image: url("../img/foodBG.jpeg");
+    	height: 100%; 
+	    background-position: center;
+	    background-size: cover;
+	}
+
+	h1, h3, h4 {
+		    font-family: 'Aisha Script';
+	}
+	p, .btn {
+		    font-family: 'Inter-UI';
+	}
+
+	.displayContent, .hideContent {
+		float: right;
+		margin-right: 5px;
+		font-size: 1.75rem;
+		cursor: pointer; 
+		color: #868e96;
+		&:hover {
+			color: black;
+		}
+	}
+
+
+
+//***** HOME JUMBOTRON *****//
+	.jumbotron  {
+		border-radius: 0;
+		background: none;
+		* {
+			text-align: center;
+		}
+	}
+	.jumboHome {
+		h1 {
+			text-shadow: 1px 1px 1px red;
+			color: black;
+		}
+		p {
+			color: black;
+		}
+	}
+//***** NAVBAR *****//
+	.navbar {
+		position: relative;
+		text-align: center;
+		z-index: 5;
+	}
+	.navbar-brand {
+		font-family: 'Aisha Script';
+		color: white;
+		text-shadow: 1px 1px 1px #dc3545;
+	}
+	.nav-link {
+		color: white;
+		font-family: 'Inter-UI';
+	}
+
+	.imgLinkContainer {
+		margin: auto;
+		padding: 0 150px 150px 150px;
+	}
+	.active {
+		color: #dc3545;
+	}
+
+//***** HOME PAGE RECIPE PORTAL *****//
+	.card {
+		border: 0;
+		background: #dc3545;
+	}
+	.recipeBody {
+		text-align: center;
+
+		.recipeTitle {
+			font-size: 2em;
+			font-weight: bold;
+			color: white;
+
+		}
+		.recipeButton {
+			display: block;
+			padding: 20px;
+			background: white;
+			color: black;
+		}
+	}
+//***** RECIPE PAGES *****//
+
+
+	.overlayBG {
+		position: relative; 
+		&:after {
+			position: absolute;
+			content: "";
+			top:0;
+			left:0;
+			width:100%;
+			height:100%;
+			background-color: black;
+			opacity:.5;
+			z-index: 1;
+		}
+	}
+
+	.recipeJumbo {
+		background-image: url("../img/foodBG.jpeg");
+    	height: 100%; 
+	    background-position: center;
+	    background-size: cover;
+	    padding-top: 0;
+	    h1 {
+	    	text-shadow: 2px 3px 0px #dc3545;
+	    }
+	}
+	.recipeContents {
+		position: relative;
+		z-index: 5;
+	}
+
+
+
+
+	.changeRecipeContainer {
+		.changeRecipeSize {
+			display: inline-block;
+			text-align: center;
+		}
+		select {
+			margin: 0 auto;
+			padding: 10px;
+		}
+		.recipeSizeButton {
+			display: inline-block;
+			input {
+				color: black;
+			}
+		}
+
+		button {
+			padding: 20px;
+		}
+	}
+	.centerList {
+	    margin: auto;
+	    margin-bottom: 15px;
+	    .infoHeader {
+	    	text-align: center;
+	    }
+	    h3 {
+	    	display: inline-block;
+    		margin: 6px auto;
+	    }
+	    #test {
+	    	border:2px solid red;
+	    	float: right;
+	    }
+	    ul {
+	    	li {
+	    		text-align: left;
+	    	}
+	    }
+	}
+
+	.imageContainer {
+		margin:  0 auto;
+	}
+	.imgTitle {
+		margin-bottom: 15px;
+		text-align: center;
+	}
+
+	.recipeContainer {
+		padding: 20px;
+		margin:0 20px 20px 20px;
+	}
+
+	.recipeIngredients, .recipeInstructions {
+		h3 {
+			background: white;
+			text-align: center;
+			border-left: 2px solid black;
+			border-right: 2px solid black;
+		}
+		ul,ol {
+			background: white;
+			border-left: 2px solid black;
+		}
+	}
+
+	.servingIcon {
+		display: inline-block;
+		margin: 0 auto;
+		padding: 25px;
+		text-align: center;
+		h3 {
+			margin-top: 25px;
+			text-shadow: 1px 1px 0 #dc3545;
+		}
+	}
+	.buttonContainer {
+		margin: 0 auto;
+	}
+	.displayServingButton {
+		margin-top: 15px;
+		padding: 20px;
+		border: 0;
+		background: white;
+		border-radius: 5px;
+		cursor: pointer;
+	}
+
+
+
+
+	//***** RECOMMENDATIONS SECTION *****//
+	.recommendationHeader {
+		display: inline-block;
+		background: white;
+		border-left: 2px solid black;
+		border-right: 2px solid black;
+
+	}
+		.recommendItems {
+			display: block;
+			margin: auto;
+		}
+
+
+ 
+

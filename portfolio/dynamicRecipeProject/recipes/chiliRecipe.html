@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Chili Recipe</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="../assets/css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico|Roboto|Zilla+Slab" rel="stylesheet">
+    <script src="../assets/js/jquery-3.2.1.js"></script>
+    <script src="../external.js"></script>
+
+    <script>
+    $(document).ready(function() {
+
+            var crockpotChiliVisits = getCookie("crockpotChiliVisitCounter"); // Gets the cookie into here
+            if (!crockpotChiliVisits) {  // If no cookie then start visits at one
+                    crockpotChiliVisits = 1;
+            } else { // Else add 1
+                crockpotChiliVisits++; 
+            }
+            setCookie("crockpotChiliVisitCounter", crockpotChiliVisits, 3); // Sets the cookie with an expiration time of 3 days 
+
+            timeVar = 0;
+            var crockpotChiliTimerCounter = getCookie("crockpotChiliTimer");
+
+            if (!crockpotChiliTimerCounter) {
+            var timerVar = setInterval(1000);
+            var crockpotChiliTimerCounter = 0;
+               ++crockpotChiliTimerCounter;
+               var hour = Math.floor(crockpotChiliTimerCounter /3600);
+               var minute = Math.floor((crockpotChiliTimerCounter - hour*3600)/60);
+               var seconds = crockpotChiliTimerCounter - (hour*3600 + minute*60);
+               var totalTime = (hour + ":" + minute + ":" + seconds);
+            
+            }
+                    
+
+            setCookie("crockpotChiliTimer", crockpotChiliTimerCounter, 1); // Sets the cookie with an expiration time of 1 day
+
+     
+
+    	//**** HIDE SERVINGS****\\
+    	$( "#hideServing" ).click(function() {
+			  $( "#hideServingContent" ).hide();
+			  $("#hideServing").css("background", "#17a2b8");
+              $("#showServing").css("background", "white");
+		});
+    	$( "#showServing" ).click(function() {
+			  $( "#hideServingContent" ).show();
+			  $("#hideServing").css("background", "white");
+              $("#showServing").css("background", "#17a2b8");
+		});
+    	//**** HIDE Ingredients****\\
+
+    	$( "#hideIngredients" ).click(function() {
+			  $( ".ingredientsList" ).hide();
+			  $("#hideIngredients").css("color", "black");
+
+		});
+    	$( "#showIngredients" ).click(function() {
+			  $( ".ingredientsList" ).show();
+			  $("#hideIngredients").css("color", "#868e96");
+
+		});
+    	//**** HIDE INSTRUCTIONS****\\
+
+    	$( "#hideInstructions" ).click(function() {
+			  $( ".instructionsList" ).hide();
+			  $("#hideInstructions").css("color", "black");
+
+		});
+    	$( "#showInstructions" ).click(function() {
+			  $( ".instructionsList" ).show();
+			  $("#hideInstructions").css("color", "#868e96");
+
+		});
+		
+
+
+    	$(".instructionsList").height($(".ingredientsList").height()); // Gives .instructionsList the same height as .ingredientsList 
+
+        $("#halfRecipe").click(function() {
+
+            $("#halfRecipe").css("background-color", "#007bff"); // Active
+            $("#halfRecipe").css("border", "2px solid black"); // Active
+            $("#halfRecipe").css("color", "white"); // Active
+
+            $("#regularRecipe").css("background-color", "white"); // These switch to the non-active
+            $("#regularRecipe").css("border", "none"); // These switch to the non-active
+            $("#regularRecipe").css("color", "Black"); // Active
+
+            $("#doubleRecipe").css("background-color", "white"); // These switch to the non-active
+            $("#doubleRecipe").css("border", "none"); // These switch to the non-active
+            $("#doubleRecipe").css("color", "Black"); // Active
+
+            $("#serve1").html("3");
+            $("#serve2").html("13");
+            $("#serve3").html("3");
+            $("#serve4").html("3");
+
+            $("#ingredient1").html("1");
+            $("#ingredient2").html("1/2");
+            $("#ingredient3").html("1/2");
+            $("#ingredient4").html("2");
+            $("#ingredient5").html("1/2");
+            $("#ingredient6").html("1/2");
+            $("#ingredient7").html("1");
+            $("#ingredient8").html("1");
+            $("#ingredient9").html("1");
+            $("#ingredient10").html("1");
+            $("#ingredient11").html("1/2");
+            $("#ingredient12").html("1/4");
+        });
+        $("#regularRecipe").click(function() {
+
+            $("#regularRecipe").css("background-color", "#007bff"); // Active
+            $("#regularRecipe").css("border", "2px solid black"); // Active
+            $("#regularRecipe").css("color", "white"); // Active
+
+
+            $("#halfRecipe").css("background-color", "white"); // These switch to the non-active
+            $("#halfRecipe").css("border", "none"); // These switch to the non-active
+            $("#halfRecipe").css("color", "black"); // Active
+
+            $("#doubleRecipe").css("background-color", "white"); // These switch to the non-active
+            $("#doubleRecipe").css("border", "none"); // These switch to the non-active
+            $("#doubleRecipe").css("color", "black"); // Active
+
+            $("#serve1").html("6");
+            $("#serve2").html("25");
+            $("#serve3").html("6");
+            $("#serve4").html("6");
+
+            $("#ingredient1").html("2");
+            $("#ingredient2").html("1");
+            $("#ingredient3").html("1");
+            $("#ingredient4").html("4");
+            $("#ingredient5").html("1");
+            $("#ingredient6").html("1");
+            $("#ingredient7").html("2");
+            $("#ingredient8").html("2");
+            $("#ingredient9").html("2");
+            $("#ingredient10").html("2");
+            $("#ingredient11").html("1");
+            $("#ingredient12").html("1/2");
+        });
+        $("#doubleRecipe").click(function() {
+
+            $("#doubleRecipe").css("background-color", "#007bff"); // Active
+            $("#doubleRecipe").css("border", "2px solid black"); // Active
+            $("#doubleRecipe").css("color", "white"); // Active
+
+
+            $("#regularRecipe").css("background-color", "white"); // These switch to the non-active
+            $("#regularRecipe").css("border", "none"); // These switch to the non-active
+            $("#regularRecipe").css("color", "black"); // Active
+
+            $("#halfRecipe").css("background-color", "white"); // These switch to the non-active
+            $("#halfRecipe").css("border", "none"); // These switch to the non-active
+            $("#halfRecipe").css("color", "black"); // Active
+
+            $("#serve1").html("12");
+            $("#serve2").html("50");
+            $("#serve3").html("12");
+            $("#serve4").html("13");
+
+            $("#ingredient1").html("4");
+            $("#ingredient2").html("2");
+            $("#ingredient3").html("2");
+            $("#ingredient4").html("8");
+            $("#ingredient5").html("2");
+            $("#ingredient6").html("2");
+            $("#ingredient7").html("4");
+            $("#ingredient8").html("4");
+            $("#ingredient9").html("4");
+            $("#ingredient10").html("4");
+            $("#ingredient11").html("2");
+            $("#ingredient12").html("1");
+        });
+
+    });
+    </script>
+</head>
+
+<body class="bg-light">
+
+    <div class="row">
+        <div class="col-12">
+            <div class="overlayBG">
+            <div class="jumbotron text-light recipeJumbo">
+                <nav class="navbar navbar-expand-lg navbar-primary ">
+                    <a class="navbar-brand" href="../index.html">Cookin' With Carl</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link" href="../index.html">Home <span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#">Crockpot Chili</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="chiliCheeseDogs.html">Chili Cheese Dogs</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="chiliCheeseFries.html">Chili Cheese Fries</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+                <div class="recipeContents">
+                    
+                <h1 class="display-3">Crockpot Chili Recipe</h1>
+                <p class="lead">Cookin' With Carl is a website that holds a vast and diverse amount of recipes.</p>
+                <div class="row changeRecipeContainer">
+                    <div class="col-12 col-md-4 changeRecipeSize">
+                        <button type="button" class="btn btn-light" id="halfRecipe">Half the recipe's size</button>
+                    </div>
+                    <div class="col-12 col-md-4 changeRecipeSize">
+                        <button type="button" class="btn btn-light" id="regularRecipe">Regular recipe's size</button>
+                    </div>
+                    <div class="col-12 col-md-4 changeRecipeSize">
+                        <button type="button" class="btn btn-light" id="doubleRecipe">Double the recipe's size</button>
+                    </div>
+                </div>
+                <div id="hideServingContent" class="servingInfo">
+                    <div class="servingIcon">
+                        <img src="../assets/img/cutlery.png">
+                        <h3>Serves</h3>
+                        <p><span id="serve1">6</span></p>
+                    </div>
+                    <div class="servingIcon">
+                        <img src="../assets/img/rollingPin.png">
+                        <h3>Prep Time</h3>
+                        <p><span id="serve2">25</span> minutes</p>
+                    </div>
+                    <div class="servingIcon"> 
+                        <img src="../assets/img/cooking.png">
+                        <h3>Coooking Time</h3>
+                        <p><span id="serve3">6</span> hours</p>
+                    </div>
+                    <div class="servingIcon"> 
+                        <img src="../assets/img/hourglass.png">
+                        <h3>Total Time</h3>
+                        <p><span id="serve4">6+</span> hours</p>
+                    </div>
+                    <h3>Level: easy</h3>
+                </div>
+                <div class="buttonContainer">
+                    <button class="displayServingButton" id="hideServing">Hide Servings</button>
+                    <button class="displayServingButton" id="showServing">Show Servings</button>
+                </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+    <div class="recipeContainer">
+        <div class="row">
+            <div class="col-m-12 imageContainer">
+                <img src="../assets/img/chili.png" class="imgTitle" title="Crockpot Chili" alt="Crockpot Chili picture">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <section id="chiliIngredients" class="recipeIngredients">
+                    <h3>Ingredients
+                    	<span class="hideContent" id="hideIngredients">-</span>
+                    	<span class="displayContent" id="showIngredients">+</span>
+                    </h3>
+
+                    <ul class="ingredientsList">
+                        <li><span id="ingredient1">2</span> tablespoon cooking oil</li>
+                        <li><span id="ingredient2">1</span> cup onion</li>
+                        <li><span id="ingredient3">1</span> cup chopped peppers</li>
+                        <li><span id="ingredient4">4</span> tablespoon Chili powder</li>
+                        <li><span id="ingredient5">1</span> teaspoon Hot chili powder (optional)</li>
+                        <li><span id="ingredient6">1</span> lb. ground beef or chicken</li>
+                        <li><span id="ingredient7">2</span> cans Red Beans</li>
+                        <li><span id="ingredient8">2</span> cans Kidney Beans</li>
+                        <li><span id="ingredient9">2</span> cans Tomato Puree</li>
+                        <li><span id="ingredient10">2</span> cans Tomato Sauce</li>
+                        <li><span id="ingredient11">1</span> cup shredded cheese (optional)</li>
+                        <li><span id="ingredient12">1/2</span> cup sour cream (optional)</li>
+                    </ul>
+                </section>
+            </div>
+            <div class="col-6">
+                <section id="chiliInstructions" class="recipeInstructions">
+                    <h3>Instructions
+                    		<span class="hideContent" id="hideInstructions">-</span>
+                    		<span class="displayContent" id="showInstructions">+</span>
+                    </h3>
+                    <ol class="instructionsList">
+                        <li>Heat cooking oil in <span>2</span> quart</li>
+                        <li>Saute onions and peppers for <span>5</span> minutes</li>
+                        <li>Add spices and stir for <span>30</span> seconds.</li>
+                        <li>Add meat and cook until browned. Approximately <span>15</span> minutes.</li>
+                        <li>Pour contents of skillet into <span>3</span> quart crock pot.</li>
+                        <li>Rinse beans and place in crockpot.</li>
+                        <li>Open and pour Tomato puree and sauce into crock pot.</li>
+                        <li>Cover crockpot and cook on low for <span></span>6 hours.</li>
+                        <li>Serve into individual bowls and top with sour cream and cheese.</li>
+                    </ol>
+                </section>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-md-12 recommendationHeader">
+                <h1 class="text-center">You may also like:</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-md-6">
+                <a href="chiliCheeseDogs.html">
+                    <h2 class="text-center">Chili-Cheese Dogs</h2>
+                    <img class="recommendItems" src="../assets/img/cheesedogs.jpg">
+                </a>
+            </div>
+            <div class="col-12 col-md-6">
+                <a href="chiliCheeseFries.html">
+                    <h2 class="text-center">Chili Cheese Fries</h2>
+                    <img class="recommendItems" src="../assets/img/cheesefries.jpg">
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+</body>
+
+</html>

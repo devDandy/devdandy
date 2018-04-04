@@ -1,0 +1,193 @@
+@font-face {
+  font-family: 'Aisha Script';
+  src: url("../fonts/aisha_script-webfont.woff2") format("woff2"), url("../fonts/aisha_script-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Inter-UI';
+  src: url("../fonts/Inter-UI-Regular.woff2") format("woff2"), url("../fonts/Inter-UI-Regular.woff1") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+body, html {
+  height: 100%;
+  margin: 0; }
+
+.bg {
+  background-image: url("../img/foodBG.jpeg");
+  height: 100%;
+  background-position: center;
+  background-size: cover; }
+
+h1, h3, h4 {
+  font-family: 'Aisha Script'; }
+
+p, .btn {
+  font-family: 'Inter-UI'; }
+
+.displayContent, .hideContent {
+  float: right;
+  margin-right: 5px;
+  font-size: 1.75rem;
+  cursor: pointer;
+  color: #868e96; }
+  .displayContent:hover, .hideContent:hover {
+    color: black; }
+
+.jumbotron {
+  border-radius: 0;
+  background: none; }
+  .jumbotron * {
+    text-align: center; }
+
+.jumboHome h1 {
+  text-shadow: 1px 1px 1px red;
+  color: black; }
+
+.jumboHome p {
+  color: black; }
+
+.navbar {
+  position: relative;
+  text-align: center;
+  z-index: 5; }
+
+.navbar-brand {
+  font-family: 'Aisha Script';
+  color: white;
+  text-shadow: 1px 1px 1px #dc3545; }
+
+.nav-link {
+  color: white;
+  font-family: 'Inter-UI'; }
+
+.imgLinkContainer {
+  margin: auto;
+  padding: 0 150px 150px 150px; }
+
+.active {
+  color: #dc3545; }
+
+.card {
+  border: 0;
+  background: #dc3545; }
+
+.recipeBody {
+  text-align: center; }
+  .recipeBody .recipeTitle {
+    font-size: 2em;
+    font-weight: bold;
+    color: white; }
+  .recipeBody .recipeButton {
+    display: block;
+    padding: 20px;
+    background: white;
+    color: black; }
+
+.overlayBG {
+  position: relative; }
+  .overlayBG:after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: .5;
+    z-index: 1; }
+
+.recipeJumbo {
+  background-image: url("../img/foodBG.jpeg");
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  padding-top: 0; }
+  .recipeJumbo h1 {
+    text-shadow: 2px 3px 0px #dc3545; }
+
+.recipeContents {
+  position: relative;
+  z-index: 5; }
+
+.changeRecipeContainer .changeRecipeSize {
+  display: inline-block;
+  text-align: center; }
+
+.changeRecipeContainer select {
+  margin: 0 auto;
+  padding: 10px; }
+
+.changeRecipeContainer .recipeSizeButton {
+  display: inline-block; }
+  .changeRecipeContainer .recipeSizeButton input {
+    color: black; }
+
+.changeRecipeContainer button {
+  padding: 20px; }
+
+.centerList {
+  margin: auto;
+  margin-bottom: 15px; }
+  .centerList .infoHeader {
+    text-align: center; }
+  .centerList h3 {
+    display: inline-block;
+    margin: 6px auto; }
+  .centerList #test {
+    border: 2px solid red;
+    float: right; }
+  .centerList ul li {
+    text-align: left; }
+
+.imageContainer {
+  margin: 0 auto; }
+
+.imgTitle {
+  margin-bottom: 15px;
+  text-align: center; }
+
+.recipeContainer {
+  padding: 20px;
+  margin: 0 20px 20px 20px; }
+
+.recipeIngredients h3, .recipeInstructions h3 {
+  background: white;
+  text-align: center;
+  border-left: 2px solid black;
+  border-right: 2px solid black; }
+
+.recipeIngredients ul, .recipeIngredients ol, .recipeInstructions ul, .recipeInstructions ol {
+  background: white;
+  border-left: 2px solid black; }
+
+.servingIcon {
+  display: inline-block;
+  margin: 0 auto;
+  padding: 25px;
+  text-align: center; }
+  .servingIcon h3 {
+    margin-top: 25px;
+    text-shadow: 1px 1px 0 #dc3545; }
+
+.buttonContainer {
+  margin: 0 auto; }
+
+.displayServingButton {
+  margin-top: 15px;
+  padding: 20px;
+  border: 0;
+  background: white;
+  border-radius: 5px;
+  cursor: pointer; }
+
+.recommendationHeader {
+  display: inline-block;
+  background: white;
+  border-left: 2px solid black;
+  border-right: 2px solid black; }
+
+.recommendItems {
+  display: block;
+  margin: auto; }

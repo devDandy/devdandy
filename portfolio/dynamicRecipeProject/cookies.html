@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Cookin' With Carl - Cookie Information</title>
+    <script src="../jQuery/js/jquery-3.2.1.js"></script>
+    <script src="external.js"></script>
+	<script>
+
+    $(document).ready(function() {
+
+    	var CrockpotChiliVisitors = getCookie("crockpotChiliVisitCounter");
+    	var chiliCheeseDogVisitors = getCookie("chiliCheeseDogVisitCounter");
+    	var chiliCheeseFriesVisitors = getCookie("friesVisitCounter");
+
+    	function displayVisitors(inPage, inElement) {
+	    	if (inPage == "") {
+	    		$(inElement).html(" You haven't visited this recipe yet.");
+	    	} else if (inPage == 1) {
+	    		$(inElement).html(" That was the first time you visited that recipe!");
+	    	} else {
+	    		$(inElement).html(inPage + " times.");
+	    	}
+    	}
+    	displayVisitors(CrockpotChiliVisitors, "#displayCrockpotRecipe"); 
+    	displayVisitors(chiliCheeseDogVisitors, "#displayDogsRecipe"); 
+    	displayVisitors(chiliCheeseFriesVisitors, "#displayFriesRecipe"); 
+
+    	var crockPotChiliTimer = getCookie("crockpotChiliTimer3");
+
+    	function displayRecipeTimeAmounts(inPage, inElement) {
+    		if (inPage == "") {
+	    		$(inElement).html(" You haven't visited this recipe yet.");
+    		} else {
+	    		$(inElement).html("Your average time on this page was:" + crockPotChiliTimer + ".");
+    		}
+    	}
+    	displayRecipeTimeAmounts(crockPotChiliTimer, "#displayCrockpotChiliTimer");
+
+
+		var timerVar = setInterval(countTimer, 1000);
+		var totalSeconds = 0;
+
+		function countTimer() {
+		   ++totalSeconds;
+		   var hour = Math.floor(totalSeconds /3600);
+		   var minute = Math.floor((totalSeconds - hour*3600)/60);
+		   var seconds = totalSeconds - (hour*3600 + minute*60);
+		   var totalTime = (hour + ":" + minute + ":" + seconds);
+		   return totalTime;
+		}		
+      });
+	</script>
+</head>
+<body>
+
+<div id="timer"></div>
+<div id ="stop_timer" onclick="clearInterval(timerVar)">Stop time</div>
+
+<h2>How many times you visited:</h2>
+<p>Chili Crockpot:<br> <span id="displayCrockpotRecipe"></span></p>
+<p>Devilish Chili-Cheese Dogs:<br> <span id="displayDogsRecipe"></span></p>
+<p>Chili Cheese Fries:<br> <span id="displayFriesRecipe"></span></p>
+<h2>How long you spent on each recipe page:</h2>
+<p>Crockpot Chili Recipe:<br> <span id="displayCrockpotChiliTimer"></span></p>
+<p>Devilish Chili-Cheese Dogs:<br> <span id="displayCrockpotChiliTimer"></span></p>
+<p>Chili Cheese Fries:<br> <span id="displayCrockpotChiliTimer"></span></p>
+
+</body>
+</html>

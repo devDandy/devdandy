@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Chili Cheese Fries - Cookin' With Carl</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="../assets/css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico|Roboto|Zilla+Slab" rel="stylesheet">
+    <script src="../assets/js/jquery-3.2.1.js"></script>
+    <script src="../external.js"></script>
+    <script>
+        $(document).ready(function() {
+
+                var friesVisits = getCookie("friesVisitCounter"); // Gets the cookie into here
+                if (!friesVisits) {  // If no cookie then start visits at one
+                        friesVisits = 1;
+                } else { // Else add 1
+                    friesVisits++;
+                }
+                setCookie("friesVisitCounter", friesVisits, 3); // Sets the cookie with an expiration time of 3 days 
+
+
+        //**** HIDE SERVINGS****\\
+        $( "#hideServing" ).click(function() {
+              $( "#hideServingContent" ).hide();
+              $("#hideServing").css("background", "#17a2b8");
+              $("#showServing").css("background", "white");
+        });
+        $( "#showServing" ).click(function() {
+              $( "#hideServingContent" ).show();
+              $("#hideServing").css("background", "white");
+              $("#showServing").css("background", "#17a2b8");
+        });
+            //**** HIDE Ingredients****\\
+
+            $( "#hideIngredients" ).click(function() {
+                  $( ".ingredientsList" ).hide();
+                  $("#hideIngredients").css("color", "black");
+
+            });
+            $( "#showIngredients" ).click(function() {
+                  $( ".ingredientsList" ).show();
+                  $("#hideIngredients").css("color", "#868e96");
+
+            });
+            //**** HIDE INSTRUCTIONS****\\
+
+            $( "#hideInstructions" ).click(function() {
+                  $( ".instructionsList" ).hide();
+                  $("#hideInstructions").css("color", "black");
+
+            });
+            $( "#showInstructions" ).click(function() {
+                  $( ".instructionsList" ).show();
+                  $("#hideInstructions").css("color", "#868e96");
+
+            });
+            
+            $("#recipeSize").change(function(){
+
+                var selectedValue = $("#recipeSize").val(); //Grabs value
+
+                if (selectedValue == "halfRecipe") {
+                    $("#serve1").html("3");
+                    $("#serve2").html("less than 5");
+                    $("#serve3").html("20");
+                    $("#serve4").html("25ish");
+
+                    $("#ingredient1").html("1/2");
+                    $("#ingredient2").html("1");
+                    $("#ingredient3").html("1");
+                    $("#ingredient4").html("1");
+                    $("#ingredient5").html("1/2");
+                    $("#ingredient6").html("4");
+                    $("#ingredient7").html("1/2");
+                } 
+
+                if (selectedValue == "regularRecipe") {
+                    $("#serve1").html("6");
+                    $("#serve2").html("5");
+                    $("#serve3").html("20");
+                    $("#serve4").html("25");
+
+                    $("#ingredient1").html("1");
+                    $("#ingredient2").html("2");
+                    $("#ingredient3").html("2");
+                    $("#ingredient4").html("2");
+                    $("#ingredient5").html("1");
+                    $("#ingredient6").html("8");
+                    $("#ingredient7").html("1");
+                }
+                if (selectedValue == "doubleRecipe") {
+                    $("#serve1").html("12");
+                    $("#serve2").html("10");
+                    $("#serve3").html("40");
+                    $("#serve4").html("50");
+
+                    $("#ingredient1").html("2");
+                    $("#ingredient2").html("4");
+                    $("#ingredient3").html("4");
+                    $("#ingredient4").html("4");
+                    $("#ingredient5").html("2");
+                    $("#ingredient6").html("16");
+                    $("#ingredient7").html("2");
+                }
+            });
+        });
+    </script>
+</head>
+
+<body class="bg-light">
+
+    <div class="row">
+        <div class="col-12">
+            <div class="overlayBG">
+            <div class="jumbotron text-light recipeJumbo">
+    <nav class="navbar navbar-expand-lg navbar-primary ">
+        <a class="navbar-brand" href="../index.html">Cookin' With Carl</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" href="../index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="chiliRecipe.html">Crockpot Chili</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="chiliCheeseDogs.html">Chili Cheese Dogs</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">Chili Cheese Fries</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+                <div class="recipeContents">
+                <h1 class="display-3">Chili Cheese Fries</h1>
+                <p class="lead">This is an easy way to make one of my favorite snacks, chili cheese fries.</p>
+                <div class="row changeRecipeContainer">
+                    <select id="recipeSize" class="changeRecipeSize">
+                        <option value="default">Select Recipe Size</option>
+                        <option value="halfRecipe">Half Recipe</option>
+                        <option value="regularRecipe">Regular Recipe</option>
+                        <option value="doubleRecipe">Double Recipe</option>
+                    </select>
+                </div>
+                <div class="servingInfo" id="hideServingContent">
+                    <div class="servingIcon">
+                        <img src="../assets/img/cutlery.png">
+                        <h3>Serves</h3>
+                        <p><span id="serve1">6</span></p>
+                    </div>
+                    <div class="servingIcon">
+                        <img src="../assets/img/rollingPin.png">
+                        <h3>Prep Time</h3>
+                        <p><span id="serve2">5</span> minutes</p>
+                    </div>
+                    <div class="servingIcon"> 
+                        <img src="../assets/img/cooking.png">
+                        <h3>Coooking Time</h3>
+                        <p><span id="serve3">20</span> minutes</p>
+                    </div>
+                    <div class="servingIcon"> 
+                        <img src="../assets/img/hourglass.png">
+                        <h3>Total Time</h3>
+                        <p><span id="serve4">25</span> minutes</p>
+                    </div>
+                    <h3>Level: easy</h3>
+                </div>
+                <div class="buttonContainer">
+                    <button class="displayServingButton" id="hideServing">Hide Servings</button>
+                    <button class="displayServingButton" id="showServing">Show Servings</button>
+                </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+    <div class="recipeContainer">
+        <div class="row">
+            <div class="col-m-12 imageContainer">
+                <img src="../assets/img/cheesefries.jpg" class="imgTitle" title="Crockpot Chili" alt="Crockpot Chili picture">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <section id="chiliIngredients" class="recipeIngredients">
+                    <h3>Ingredients
+                        <span class="hideContent" id="hideIngredients">-</span>
+                        <span class="displayContent" id="showIngredients">+</span>
+                    </h3>
+
+                    <ul class="ingredientsList">
+                        <li><span id="ingredient1" class="ingredientsListItem">1</span> (32-ounce) package frozen seasoned french fries</li>
+                        <li><span id="ingredient2" class="ingredientsListItem">2</span> tablespoons cornstarch</li>
+                        <li><span id="ingredient3" class="ingredientsListItem">2</span> tablespoons of water</li>
+                        <li><span id="ingredient4" class="ingredientsListItem">2</span> cups of low-fat milk</li>
+                        <li><span id="ingredient5" class="ingredientsListItem">1</span> tablespoon of margarine</li>
+                        <li><span id="ingredient6" class="ingredientsListItem">8</span> slices of American cheese, cut into pieces</li>
+                        <li><span id="ingredient7" class="ingredientsListItem">1</span> (15-ounce) can of chili without beans</li>
+                    </ul>
+                </section>
+            </div>
+            <div class="col-6">
+                <section id="chiliInstructions" class="recipeInstructions">
+                    <h3>Instructions
+                            <span class="hideContent" id="hideInstructions">-</span>
+                            <span class="displayContent" id="showInstructions">+</span>
+                    </h3>
+                    <ol class="instructionsList">
+                        <li>Prepare french fries as directed on the package.</li>
+                        <li>Stir cornstarch and water in a small cup until cornstarch dissolves; set aside.</li>
+                        <li>Bring milk and margarine to a boil in a saucepan, stirring constantly.</li>
+                        <li>Reduce the heat and whisk the cornstarch mixture into the milk mixture, bring to a simmer over medium heat.</li>
+                        <li>Cook and stir until the mixture is thick and smooth.</li>
+                        <li>Add the cheese to the milk mixture and stir until the cheese has melted and is well combined.</li>
+                        <li>Prepare chili as directed on the can.</li>
+                        <li>Pour the cooked chili and the cheese sauce over the top of the cooked french fries.</li>
+                    </ol>
+                </section>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-md-12 recommendationHeader">
+                <h1 class="text-center">You may also like:</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-md-6">
+                <a href="chiliRecipe.html">
+                    <h2 class="text-center">Crockpot Chili</h2>
+                    <img class="recommendItems" src="../assets/img/chili.jpg">
+                </a>
+            </div>
+            <div class="col-12 col-md-6">
+                <a href="chiliCheeseDogs.html">
+                    <h2 class="text-center">Chili-Cheese Dogs</h2>
+                    <img class="recommendItems" src="../assets//img/cheesedogs.jpg">
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+</body>
+
+</html>
