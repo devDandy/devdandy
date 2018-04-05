@@ -429,9 +429,9 @@ a {
     text-align: center; }
 
 /* The Modal */
-#openPortfolio1, #openPortfolio3, #openPortfolio5, #openPortfolio7 {
+#openPortfolio1, #openPortfolio3, #openPortfolio5, #openPortfolio7, #openPortfolio9 {
   background-color: #FF6A6A; }
-  #openPortfolio1:hover, #openPortfolio3:hover, #openPortfolio5:hover, #openPortfolio7:hover {
+  #openPortfolio1:hover, #openPortfolio3:hover, #openPortfolio5:hover, #openPortfolio7:hover, #openPortfolio9:hover {
     background-color: #2A2D34; }
 
 #openPortfolio2, #openPortfolio4, #openPortfolio6, #openPortfolio8 {
