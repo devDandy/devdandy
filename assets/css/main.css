@@ -3,8 +3,8 @@
 /* FONTS */
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700");
 @font-face {
-  font-family: 'Starway';
-  src: url("../fonts/starway-webfont.ttf") format("ttf"), url("../fonts/starway-webfont.woff") format("woff"), url("../fonts/starway-webfont.woff2") format("woff2");
+  font-family: 'Starway-Light';
+  src: url("../fonts/starway-light-webfont.woff") format("woff"), url("../fonts/starway-light-webfont.woff2") format("woff2");
   font-weight: normal;
   font-style: normal; }
 
@@ -78,7 +78,7 @@ p {
   color: #2A2D34; }
 
 .section-title {
-  font-family: "Starway";
+  font-family: "Starway-Light";
   font-size: 100px;
   text-align: center;
   white-space: nowrap; }
@@ -90,14 +90,14 @@ p {
   color: #FF6A6A; }
 
 .secondary-title {
-  font-family: "Starway";
+  font-family: "Starway-Light";
   font-size: 62px;
   text-align: center; }
 
 .page-heading {
   display: inline-block;
   margin-top: 0.3em;
-  font-family: "Starway";
+  font-family: "Starway-Light";
   font-size: 3.5em; }
   .page-heading:nth-of-type(odd) {
     border-bottom: 2px solid #00A7E0; }
@@ -202,7 +202,7 @@ a {
 
 .desktop-menu {
   list-style-type: none;
-  font-family: "Starway";
+  font-family: "Starway-Light";
   font-size: 3em;
   text-align: left; }
   .desktop-menu .desktop-menu-item {
@@ -254,7 +254,7 @@ a {
   .mobile-menu a {
     display: block;
     text-decoration: none;
-    font-family: "Starway";
+    font-family: "Starway-Light";
     font-size: 3em;
     -webkit-transition: 0.3s;
     -o-transition: 0.3s;
@@ -281,7 +281,7 @@ a {
   .mobile-nav h1 {
     display: inline-block;
     margin-left: 10px;
-    font-family: "Starway";
+    font-family: "Starway-Light";
     font-size: 3em;
     color: #FF0F0F; }
   .mobile-nav .open-hamburger-menu {

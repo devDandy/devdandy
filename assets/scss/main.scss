@@ -6,16 +6,15 @@
 
 		/* FONTS */
 			@font-face {
-			    font-family: 'Starway';
-			    src: url("../fonts/starway-webfont.ttf") format("ttf"),
-			    	 url("../fonts/starway-webfont.woff") format("woff"),
-			         url("../fonts/starway-webfont.woff2") format("woff2");
+			    font-family: 'Starway-Light';
+			    src: url("../fonts/starway-light-webfont.woff") format("woff"),
+			         url("../fonts/starway-light-webfont.woff2") format("woff2");
 			    font-weight: normal;
 			    font-style: normal;
 			}
 			@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
 			
-			$primary-font: 'Starway';
+			$primary-font: 'Starway-Light';
 			$secondary-font: 'Open Sans', sans-serif;;
 
 
