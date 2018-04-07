@@ -247,9 +247,16 @@
 			}
 			&:nth-child(odd) a {
 				color: $alt-primary-color ;
+				&:hover {
+				text-shadow: 1px 1px 5px $secondary-color;
+				}
 			}
 			&:nth-child(even) a {
 				color: $secondary-color ;
+				&:hover {
+				text-shadow: 1px 1px 5px $primary-color;
+				}
+
 			}
 		}
 	}
@@ -269,6 +276,13 @@
 
 		}
 
+	}
+	.copyright-information {
+		position: absolute;
+		bottom: 0;
+		font-family: $secondary-font;
+		font-size: 12px;
+		color: rgba(255,255,255,0.3)
 	}
 
 
@@ -642,13 +656,19 @@
 		border: 3px solid $secondary-color;
 		outline: none;
 		border-radius: 2px;
+		&:focus {
+			box-shadow: 1px 1px 5px $primary-color;
+		}
 	}
 
 	textarea {
 		width: 95%;
-		border: 3px solid $primary-color;
+		border: 3px solid $secondary-color;
 		border-radius: 2px;
 		font-family: $secondary-font;
+		&:focus {
+			box-shadow: 1px 1px 5px $primary-color;
+		}
 	}
 
 	.btn-group {
@@ -660,14 +680,14 @@
 	.form-btn {
 		display: inline-block;
 		margin: 1em 0;
-		border: 3px solid $secondary-color;
-		border-radius: 25px;
+		border-radius: 5px;
 		background-color: $primary-color;
 		font-size: .8em;
 		color: white;
 		&:hover {
 			font-weight: bold;
 			cursor: pointer;
+			box-shadow: 2px 1px 10px $secondary-color;
 		}
 	}
 
