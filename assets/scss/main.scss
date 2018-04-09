@@ -230,6 +230,7 @@
 		top: 0;
 		width: 285px;
 		height: 100%;
+		padding-top: 50px;
 		background-color: $third-color;
 	}
 	.desktop-menu {
@@ -238,7 +239,8 @@
 		font-size: 3em;
 		text-align: left;
 		.desktop-menu-item  {
-			padding: 0 0 25px 25px ;
+			padding-bottom: 25px;
+			padding-left: 10px;
 			&:first-child a {
 				padding: 0;
 				text-align: center;
@@ -337,9 +339,8 @@
 		color: $alt-primary-color;
 	}
 	.open-hamburger-menu {
-		margin-top: 11px;
-		margin-right: 10px;
 		float: right;
+		padding: 5px;
 		&:hover {
 			cursor: pointer;
 		}
@@ -766,6 +767,7 @@
 	}
 	.mobile-nav {
 		display: block; /*Mobile nav appears*/
+ 		padding: 10px;
 	}
 	.section-title {
 		font-size: 75px;

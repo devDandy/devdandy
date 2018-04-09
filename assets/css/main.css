@@ -198,6 +198,7 @@ a {
   top: 0;
   width: 285px;
   height: 100%;
+  padding-top: 50px;
   background-color: #2A2D34; }
 
 .desktop-menu {
@@ -206,7 +207,8 @@ a {
   font-size: 3em;
   text-align: left; }
   .desktop-menu .desktop-menu-item {
-    padding: 0 0 25px 25px; }
+    padding-bottom: 25px;
+    padding-left: 10px; }
     .desktop-menu .desktop-menu-item:first-child a {
       padding: 0;
       text-align: center;
@@ -296,9 +298,8 @@ a {
     font-size: 3em;
     color: #FF0F0F; }
   .mobile-nav .open-hamburger-menu {
-    margin-top: 11px;
-    margin-right: 10px;
-    float: right; }
+    float: right;
+    padding: 5px; }
     .mobile-nav .open-hamburger-menu:hover {
       cursor: pointer; }
 
@@ -659,7 +660,8 @@ a {
     /* Resets the container to make it center*/ }
   .mobile-nav {
     display: block;
-    /*Mobile nav appears*/ }
+    /*Mobile nav appears*/
+    padding: 10px; }
   .section-title {
     font-size: 75px; } }
 
