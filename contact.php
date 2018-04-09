@@ -74,13 +74,11 @@
 	}
 	function sendEmail($sanitizedArray) 
 	{
-	    // quick message
-	    $message = "Your email has been sent!" . PHP_EOL . PHP_EOL;
 	    foreach ($sanitizedArray as $key => $value) 
 	    {
 	        $message .= $key . ": " . $value . PHP_EOL;
 	    }	    
-	    $sendSuccess = mail("dschnd@gmail.com" , "Thank you for contacting devDandy!", $message);
+	    $sendSuccess = mail("dan@devdandy.com" , "devDandy Contact Msg", $message);
 	    
 	    return $sendSuccess;
 	}
@@ -153,9 +151,11 @@
 						<div class="colored-borders">
 							<div class="success-message-container">
 								<p class="success-message-text">Your message has been sent!</p>
-								<button class="success-message-button">
-									Return To Contact
-								</button>
+								<a href="contact.php">
+									<button class="success-message-button">
+										Return To Contact
+									</button>
+								</a>
 							</div>
 						</div>
 					<?php }
