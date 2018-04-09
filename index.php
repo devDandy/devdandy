@@ -11,7 +11,7 @@
 				<div class="nav-block">
 						<ul class="desktop-menu">
 							<li class="desktop-menu-item ">
-								<a href="index.php"><span class="section-title-blue">dev</span>Dandy</a>
+								<a href="#"><span class="section-title-blue">dev</span>Dandy</a>
 								<img class="active" src="assets/img/png/popsicle-right.png">
 							</li>
 							<li class="desktop-menu-item"><a class="desktop-menu-item-link" href="homework/index.html">HW</a></li>
@@ -38,7 +38,7 @@
 						</div>
 						<div class="mobile-menu" id="mobile-menu">
   							<a href="javascript:void(0)" class="close-btn" onclick="closeNav()"> &times; </a>
-							<a href="index.php"><h1>devDandy</h1></a> 
+							<a href="#"><h1>devDandy</h1></a> 
 							<a href="homework/index.html">Homework</a> 
 							<a href="about.html">About</a>
 							<a href="resume.html">Resume</a> 

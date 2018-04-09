@@ -567,7 +567,7 @@ a {
     font-family: "Open Sans", sans-serif;
     font-size: 20px;
     font-weight: bold; }
-  .contact-form .input-container .form-error {
+  .contact-form .form-error {
     float: right;
     padding-top: 5px;
     padding-right: 10%;
@@ -576,6 +576,9 @@ a {
     font-size: 15px;
     font-style: italic;
     color: #FF0F0F; }
+  .contact-form .textarea-error {
+    padding-right: 5%;
+    /* This is because textarea is width is 95% and these MUST match to 100 or else error will be formated weird */ }
   .contact-form input[type="text"] {
     width: 90%;
     padding: 0.3em .4em;
@@ -610,6 +613,15 @@ a {
       cursor: pointer;
       -webkit-box-shadow: 2px 1px 10px #00A7E0;
       box-shadow: 2px 1px 10px #00A7E0; }
+
+.success-message-container {
+  text-align: center; }
+  .success-message-container .success-message-text {
+    margin-bottom: 10px;
+    font-size: 36px;
+    font-weight: bold; }
+  .success-message-container .success-message-button {
+    margin: 0 auto; }
 
 /* MEDIA QUERIES */
 @media only screen and (max-width: 1025px) {

@@ -630,70 +630,80 @@
 	}
 
 /**** CONTACT PAGE ****/
-.contact-form {
-	padding-top: 2em;
-	padding-bottom: 2em;
-	label {
-		display: inline-block;
-		font-family: $secondary-font;
-		font-size: 20px;
-		font-weight: bold;
-	}
-	.input-container {
-
-		.form-error {
-			float: right;
-			padding-top: 5px;
-			padding-right: 10%; /* This is because input[type="text"] width is 90% and these MUST match to 100 or else error will be formated weird */
-		 	font-family: 'Open Sans:700', sans-serif;
-			font-size:15px;
-			font-style: italic;
-	 		color: $alt-primary-color;
-		}
-	}
-	 input[type="text"] {
-		width: 90%;
-		padding: 0.3em .4em;
-		border: 3px solid $secondary-color;
-		outline: none;
-		border-radius: 2px;
-		&:focus {
-			box-shadow: 1px 1px 5px $primary-color;
-		}
-	}
-
-	textarea {
-		width: 95%;
-		border: 3px solid $secondary-color;
-		border-radius: 2px;
-		font-family: $secondary-font;
-		&:focus {
-			box-shadow: 1px 1px 5px $primary-color;
-		}
-	}
-
-	.btn-group {
-		margin: 0 auto;
-		text-align: center;
-		padding-right: 5%; /*Centering things, this HAS to change if input[type="text"]'s width and .form-error's padding-right 10% */
-	}
-
-	.form-btn {
-		display: inline-block;
-		margin: 1em 0;
-		border-radius: 5px;
-		background-color: $primary-color;
-		font-size: .8em;
-		color: white;
-		&:hover {
+	.contact-form {
+		padding-top: 2em;
+		padding-bottom: 2em;
+		label {
+			display: inline-block;
+			font-family: $secondary-font;
+			font-size: 20px;
 			font-weight: bold;
-			cursor: pointer;
-			box-shadow: 2px 1px 10px $secondary-color;
+		}
+			.form-error {
+				float: right;
+				padding-top: 5px;
+				padding-right: 10%; /* This is because input[type="text"] width is 90% and these MUST match to 100 or else error will be formated weird */
+			 	font-family: 'Open Sans:700', sans-serif;
+				font-size:15px;
+				font-style: italic;
+		 		color: $alt-primary-color;
+			}
+			.textarea-error {
+				padding-right: 5%; /* This is because textarea is width is 95% and these MUST match to 100 or else error will be formated weird */
+			}
+		 input[type="text"] {
+			width: 90%;
+			padding: 0.3em .4em;
+			border: 3px solid $secondary-color;
+			outline: none;
+			border-radius: 2px;
+			&:focus {
+				box-shadow: 1px 1px 5px $primary-color;
+			}
+		}
+
+		textarea {
+			width: 95%;
+			border: 3px solid $secondary-color;
+			border-radius: 2px;
+			font-family: $secondary-font;
+			&:focus {
+				box-shadow: 1px 1px 5px $primary-color;
+			}
+		}
+
+		.btn-group {
+			margin: 0 auto;
+			text-align: center;
+			padding-right: 5%; /*Centering things, this HAS to change if input[type="text"]'s width and .form-error's padding-right 10% */
+		}
+
+		.form-btn {
+			display: inline-block;
+			margin: 1em 0;
+			border-radius: 5px;
+			background-color: $primary-color;
+			font-size: .8em;
+			color: white;
+			&:hover {
+				font-weight: bold;
+				cursor: pointer;
+				box-shadow: 2px 1px 10px $secondary-color;
+			}
+		}
+	}
+	.success-message-container {
+		text-align: center;
+		.success-message-text {
+			margin-bottom: 10px;
+			font-size: 36px;
+			font-weight: bold;
+		}
+		.success-message-button {
+			margin: 0 auto;
 		}
 	}
 
-
-}
 
 
 /* MEDIA QUERIES */
