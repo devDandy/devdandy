@@ -55,7 +55,7 @@
 					</h1>
 					<div class="colored-borders">
 					<p class="page-description">
-						Hello world! Allow me to introduce myself: I'm a web developer who likes to mess around with all kinds of code. I love making websites and would love to help you with your next project if I'm available! I spend my weekends by either sniffing out bugs on my personal projects or I'm stressing out on my next deadline (while watching Netflix.)
+						Hello world! Allow me to introduce myself: I'm a aspiring front-end web developer who likes to mess around with all kinds of code. I love making websites and would love to help you with your next project if I'm available! I spend my weekends by either sniffing out bugs on my personal projects or I'm stressing out on my next deadline (while watching Netflix.)
 					</p>
 				</div>
 				</div>
