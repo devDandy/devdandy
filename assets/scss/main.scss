@@ -784,6 +784,19 @@
 		font-size: 75px;
 	}
  }
+  @media only screen and (max-width: 800px) {
+  	.modal-content-header {
+  		width: 95%;
+  	}
+  	.modal-content {
+  		width: 95%;
+  	}
+  	.modal-content-description-img {
+  		width: 100%;
+  	}
+  }
+
+
 
   @media only screen and (max-width: 600px) {
   	.logo {
