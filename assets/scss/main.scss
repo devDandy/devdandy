@@ -6,16 +6,15 @@
 
 		/* FONTS */
 			@font-face {
-			    font-family: 'Starway';
-			    src: url("../fonts/starway-webfont.ttf") format("ttf"),
-			    	 url("../fonts/starway-webfont.woff") format("woff"),
-			         url("../fonts/starway-webfont.woff2") format("woff2");
+			    font-family: 'Starway-Light';
+			    src: url("../fonts/starway-light-webfont.woff") format("woff"),
+			         url("../fonts/starway-light-webfont.woff2") format("woff2");
 			    font-weight: normal;
 			    font-style: normal;
 			}
 			@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
 			
-			$primary-font: 'Starway';
+			$primary-font: 'Starway-Light';
 			$secondary-font: 'Open Sans', sans-serif;;
 
 
@@ -231,6 +230,7 @@
 		top: 0;
 		width: 285px;
 		height: 100%;
+		padding-top: 50px;
 		background-color: $third-color;
 	}
 	.desktop-menu {
@@ -239,7 +239,8 @@
 		font-size: 3em;
 		text-align: left;
 		.desktop-menu-item  {
-			padding: 0 0 25px 25px ;
+			padding-bottom: 25px;
+			padding-left: 10px;
 			&:first-child a {
 				padding: 0;
 				text-align: center;
@@ -248,9 +249,16 @@
 			}
 			&:nth-child(odd) a {
 				color: $alt-primary-color ;
+				&:hover {
+				text-shadow: 1px 1px 5px $secondary-color;
+				}
 			}
 			&:nth-child(even) a {
 				color: $secondary-color ;
+				&:hover {
+				text-shadow: 1px 1px 5px $primary-color;
+				}
+
 			}
 		}
 	}
@@ -270,6 +278,13 @@
 
 		}
 
+	}
+	.copyright-information {
+		position: absolute;
+		bottom: 0;
+		font-family: $secondary-font;
+		font-size: 12px;
+		color: rgba(255,255,255,0.3)
 	}
 
 
@@ -324,9 +339,8 @@
 		color: $alt-primary-color;
 	}
 	.open-hamburger-menu {
-		margin-top: 11px;
-		margin-right: 10px;
 		float: right;
+		padding: 5px;
 		&:hover {
 			cursor: pointer;
 		}
@@ -643,13 +657,19 @@
 		border: 3px solid $secondary-color;
 		outline: none;
 		border-radius: 2px;
+		&:focus {
+			box-shadow: 1px 1px 5px $primary-color;
+		}
 	}
 
 	textarea {
 		width: 95%;
-		border: 3px solid $primary-color;
+		border: 3px solid $secondary-color;
 		border-radius: 2px;
 		font-family: $secondary-font;
+		&:focus {
+			box-shadow: 1px 1px 5px $primary-color;
+		}
 	}
 
 	.btn-group {
@@ -661,14 +681,14 @@
 	.form-btn {
 		display: inline-block;
 		margin: 1em 0;
-		border: 3px solid $secondary-color;
-		border-radius: 25px;
+		border-radius: 5px;
 		background-color: $primary-color;
 		font-size: .8em;
 		color: white;
 		&:hover {
 			font-weight: bold;
 			cursor: pointer;
+			box-shadow: 2px 1px 10px $secondary-color;
 		}
 	}
 
@@ -747,6 +767,7 @@
 	}
 	.mobile-nav {
 		display: block; /*Mobile nav appears*/
+ 		padding: 10px;
 	}
 	.section-title {
 		font-size: 75px;
