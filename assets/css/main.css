@@ -478,8 +478,6 @@ a {
   /* Stay in place */
   z-index: 1;
   /* Sit on top */
-  padding-top: 50px;
-  /* Location of the box */
   left: 0;
   top: 0;
   width: 100%;
@@ -700,8 +698,11 @@ a {
 @media only screen and (max-width: 800px) {
   .modal-content-header {
     width: 95%; }
+    .modal-content-header h2 {
+      font-size: 30px; }
   .modal-content {
-    width: 95%; }
+    width: 95%;
+    height: 500px; }
   .modal-content-description-img {
     width: 100%; } }
 
@@ -728,6 +729,9 @@ a {
     width: 100%; } }
 
 @media only screen and (max-width: 360px) {
+  .modal-content {
+    width: 95%;
+    height: 400px; }
   .section-title {
     font-size: 45px; }
   .page-description {
