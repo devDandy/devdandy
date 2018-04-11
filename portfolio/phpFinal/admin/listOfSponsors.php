@@ -62,8 +62,8 @@
                         <li><a href="../get-involved.php">Get Involved</a></li>
                         <li><a href="../contact.php">Contact Us</a></li>
                         <li class="active"><a href="admin.php">Admin</a></li>
-                        <li class="logo"><a href="../index.php"><span class="ankeny">Ankeny</span><br> <span class="summerfest">Summerfest</span></a></li>
                     </ul>
+                        <div class="logo"><a href="../index.php"><span class="ankeny">Ankeny</span><br> <span class="summerfest">Summerfest</span></a></div>
                 </div>
         </nav>
         <div class="container">

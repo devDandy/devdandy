@@ -243,8 +243,8 @@ if (isset($_POST["sponSubmit"])) {
                         <li class="active"><a href="get-involved.php">Get Involved</a></li>
                         <li><a href="contact.php">Contact Us</a></li>
                         <li><a href="admin/admin.php">Admin</a></li>
-                        <li class="logo"><a href="index.php"><span class="ankeny">Ankeny</span><br> <span class="summerfest">Summerfest</span></a></li>
                     </ul>
+                    <div class="logo"><a href="../index.php"><span class="ankeny">Ankeny</span><br> <span class="summerfest">Summerfest</span></a></div>
                 </div>
 
         </nav>
@@ -253,7 +253,7 @@ if (isset($_POST["sponSubmit"])) {
     <main id="main" >
         <div class="container">
             <h1 class="header-title"><?php echo $header_title;?></h1>
-            <p class="lead"><?php echo $header_paragraph; ?></p>
+            <p class="lead get-involved-lead"><?php echo $header_paragraph; ?></p>
             <div>
                 <button id="triggerVolunteerModal" onclick="openModal(volunteerModal)" class="big-btn btn" name="volunteerButton">Become A Volunteer</button>
 

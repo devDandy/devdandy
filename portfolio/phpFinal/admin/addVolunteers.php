@@ -198,6 +198,7 @@
         header('Location: admin.php');
     }
 
+
 ?>
 
 <!doctype html>
@@ -227,8 +228,8 @@
                         <li><a href="../get-involved.php">Get Involved</a></li>
                         <li><a href="../contact.php">Contact Us</a></li>
                         <li class="active"><a href="admin.php">Admin</a></li>
-                        <li class="logo"><a href="../index.php"><span class="ankeny">Ankeny</span><br> <span class="summerfest">Summerfest</span></a></li>
                     </ul>
+                        <div class="logo"><a href="../index.php"><span class="ankeny">Ankeny</span><br> <span class="summerfest">Summerfest</span></a></div>
                 </div>
         </nav>
 
@@ -237,6 +238,9 @@
                 <div class="title">
                     <h2><?php echo $pageTitle; ?></h2>
                 </div>
+                        <p class="volunteerAddedMsg">
+                            <?php echo $message; ?>
+                        </p>
                         <form method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" enctype="multipart/form-data" class="SignupForm" id="volunteerSignUpForm" name="volunteerSignupForm">
 
                             <div class="volFormSelection">
@@ -258,7 +262,7 @@
                                 
                                 <br>
                             <label for="Birth Date">Birth Date:</label> <span class="error"><?php echo $inVolBirthDateError ?></span><br>
-                                <input type="text" name="volBirthDate" placeholder="MM/DD/YYYY" value="<?php echo $inVolBirthDate ?>">
+                                <input type="text" name="volBirthDate" placeholder="MM-DD-YYYY" value="<?php echo $inVolBirthDate ?>">
                             <br> 
                             </div>
                             <div class="volFormSelection">
@@ -272,10 +276,6 @@
                                 <div class="checkboxListItem"><input type="checkbox" name="volAvailability[]" value="TBD" value="<?php echo $inVolAvailablityVariables ?>"><span class="checkboxDescription">Don't know yet.</span></div><br>
                             </div>
                             <br><br>
-                            <label for="fileSelect">Resume:</label> <span class="error"><?php echo $inVolResumeError ?></span><br><br>
-                               <input type="file" id="fileSelect" name="volResume">
-                                <p class="fileMsg"><strong>Note:</strong> Only .docx, and .pdf formats allowed to a max size of 5 MB.</p>
-                            
                             <label for="Volunteer Message">Questions, Comments, Concerns:</label> <span class="error"><?php echo $inVolMessageError ?></span> <br>
                                 <textarea rows="4" cols="50" name="volMessage"><?php echo $inVolMessage ?></textarea><br>  
                             </div>
@@ -286,9 +286,7 @@
                                 <input type="reset" name="volReset" value="Clear" class="btn">
                             </div>
                         </form>
-                        <p class="volunteerAddedMsg">
-                            <?php echo $message; ?>
-                        </p>
+
                    </div>
             </div>
 

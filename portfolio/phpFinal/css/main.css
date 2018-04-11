@@ -55,7 +55,7 @@ p {
   font-family: 'Open Sans'; }
 
 .lead {
-  font-size: 2.5rem; }
+  font-size: 1.5rem; }
 
 input[type=text], input[type=email], select, textarea {
   width: 100%;
@@ -83,24 +83,24 @@ label {
     cursor: pointer; }
 
 .logo {
-  position: absolute;
-  top: 0;
-  right: 0;
-  font-family: "sweet_sorrowscript"; }
+  text-align: center;
+  font-size: 3.5rem; }
   .logo a {
-    font-family: "sweet_sorrowscript" !important; }
+    font-family: "sweet_sorrowscript" !important;
+    text-decoration: none; }
 
 .active a {
   color: #FF6E40 !important; }
 
 /**HOME PAGE**/
 .home-header-bg {
+  display: inline-block;
+  width: 100%;
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url("../assets/img/fireworkBG.jpeg");
   background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../assets/img/fireworkBG.jpeg");
   background-image: -o-linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../assets/img/fireworkBG.jpeg");
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../assets/img/fireworkBG.jpeg");
   position: relative;
-  height: 100%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover; }
@@ -123,11 +123,33 @@ label {
     color: white; }
 
 /*Other Header*/
+.index-header-bg {
+  position: relative;
+  height: 100%;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url("../assets/img/fireworkBG.jpeg");
+  background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../assets/img/fireworkBG.jpeg");
+  background-image: -o-linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../assets/img/fireworkBG.jpeg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../assets/img/fireworkBG.jpeg");
+  position: relative;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+  .index-header-bg .home-header-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    line-height: 85px;
+    text-align: center;
+    color: white; }
+
 .header-bg {
   background: #1E88E5;
   /* For browsers that do not support gradients */
   position: relative;
-  height: 125px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover; }
@@ -145,9 +167,9 @@ label {
   top: 0;
   right: 0; }
   .navMenu ul.navList {
-    list-style-type: none;
     margin: 0;
     padding: 0;
+    list-style-type: none;
     overflow: 0; }
     .navMenu ul.navList li {
       display: inline-block; }
@@ -165,17 +187,11 @@ label {
 
 /***** ADMIN LOGIN PAGE *****/
 .adminLoginContainer {
-  position: relative;
-  top: 50%;
-  left: 50%;
   background: white;
   width: 40rem;
   height: 45rem;
+  margin: 0 auto;
   padding: 2rem;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
   border-radius: 1rem; }
   .adminLoginContainer h2 {
     font-family: "dekarregular";
@@ -197,6 +213,8 @@ label {
     border-radius: .5rem;
     text-align: center;
     color: white; }
+    .adminLoginContainer .adminLoginActionFields:hover {
+      cursor: pointer; }
 
 .adminControlPanel {
   border-radius: 1rem;
@@ -264,8 +282,7 @@ label {
 
 .error {
   float: right;
-  font-size: 2rem;
-  font-style: italic;
+  font-size: 1.3rem;
   color: red; }
 
 /***** GET-INVOLVED PAGE *****/
@@ -294,11 +311,11 @@ label {
   width: 50%; }
 
 .closeModal {
-  color: black;
   float: right;
   opacity: .8;
   font-size: 3rem;
-  font-weight: bold; }
+  font-weight: bold;
+  color: #FF6E40; }
   .closeModal:hover, .closeModal:focus {
     opacity: 1;
     text-decoration: none;
@@ -341,17 +358,12 @@ label {
 
 /***** Add Volunteers *****/
 .adminAddVolunteers {
-  position: relative;
-  top: 50%;
-  left: 50%;
   background: white;
   width: 75%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  border-radius: 1rem;
-  margin-bottom: .5rem; }
+  margin: 0 auto;
+  margin-top: 1rem;
+  margin-bottom: .5rem;
+  border-radius: 1rem; }
   .adminAddVolunteers .title {
     background: #FF6E40;
     padding: 1rem;
@@ -467,3 +479,39 @@ label {
   padding-bottom: 1rem; }
   .sendEmailContainer .btnContainer .btn {
     width: 45%; }
+
+/*Media Queries*/
+@media only screen and (max-width: 1175px) {
+  .home-header-bg {
+    height: auto; }
+  .card-container {
+    display: inline-block;
+    width: 50%;
+    margin: 1rem; }
+    .card-container .card {
+      width: 100%; }
+  .adminControlPanel .controlPanelOption {
+    margin: 0; } }
+
+/*Gives more space to Get-Involved Modal */
+@media only screen and (max-width: 975px) {
+  .modalContent {
+    width: 75%; }
+  .get-involved-lead {
+    padding: 0 2rem; } }
+
+@media only screen and (max-width: 695px) {
+  .adminAddVolunteers .volFormSelection {
+    width: 100%;
+    float: none; } }
+
+@media only screen and (max-width: 675px) {
+  .card-container {
+    width: 75%; }
+  /*Gives more space to Get-Involved Modal */
+  .modalContent {
+    width: 95%; } }
+
+@media only screen and (max-width: 455px) {
+  .card-container {
+    width: 95%; } }

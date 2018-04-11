@@ -224,9 +224,8 @@
                         <li><a href="get-involved.php">Get Involved</a></li>
                         <li class="active"><a href="contact.php">Contact Us</a></li>
                         <li><a href="admin/admin.php">Admin</a></li>
-                        <li class="logo"><a href="index.php"><span class="ankeny">Ankeny</span><br> <span class="summerfest">Summerfest</span></a></li>
-
                     </ul>
+                    <div class="logo"><a href="../index.php"><span class="ankeny">Ankeny</span><br> <span class="summerfest">Summerfest</span></a></div>
                 </div>
 
         </nav>
@@ -272,7 +271,7 @@
             </form>
             </div>
 
-            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11913.489015975509!2d-93.6182434!3d41.7124855!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xbde2ca6e3850b536!2sAnkeny+Area+Chamber+of+Commerce!5e0!3m2!1sen!2sus!4v1512762920392" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11913.489015975509!2d-93.6182434!3d41.7124855!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xbde2ca6e3850b536!2sAnkeny+Area+Chamber+of+Commerce!5e0!3m2!1sen!2sus!4v1512762920392" width="auto" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
         <p>Ankeny Area Chamber of Commerce  |  1631 SW Main Street, Ste. 204/205, Ankeny, IA 50023 | (515) 964-0685</p>
         </div>
         <!-- container -->

@@ -51,7 +51,7 @@
 		
 			$to = $this->getRecipient();
 			$subject = $this->getSubject();
-			$messageText = wordwrap($this->getMessage(), 65, "/n", FALSE);
+			$messageText = wordwrap($this->getMessage(), 65, "\n", FALSE);
 			$header = 'From: ' . $this->getSender();
 			
 			return mail($to, $subject, $messageText, $header);

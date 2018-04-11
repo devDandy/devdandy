@@ -15,7 +15,7 @@
 
 
 
-            <div class="home-header-bg">
+            <div class="index-header-bg">
         <nav>
                 <div class="navMenu">
                     <ul class="navList">

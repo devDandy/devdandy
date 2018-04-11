@@ -55,7 +55,7 @@ p {
     font-family: 'Open Sans';
 }
 .lead {
-    font-size:2.5rem;
+    font-size:1.5rem;
 }
 
     input[type=text], input[type=email], select, textarea  {
@@ -91,12 +91,11 @@ label {
 }
 
 .logo {
-    position: absolute;
-    top: 0;
-    right: 0;
-    font-family: "sweet_sorrowscript"; 
+    text-align: center;
+    font-size: 3.5rem;
     a {
     font-family: "sweet_sorrowscript" !important; 
+    text-decoration: none;
     }
 }
 
@@ -107,12 +106,13 @@ label {
 /**HOME PAGE**/
 
 .home-header-bg {
+    display: inline-block;
+    width: 100%;
     background-image:linear-gradient( rgba(0,0,0,.5), rgba(0,0,0,.5) ),
     url('../assets/img/fireworkBG.jpeg');
     //background-image: url('../assets/img/fireworkBG.jpeg');
     position: relative;
-    height: 100%;
-    //line-height: 100%;
+    // height: 100%;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -139,10 +139,34 @@ label {
 
 /*Other Header*/
 
+.index-header-bg {
+    position: relative;
+    height: 100%;
+    background-image:linear-gradient( rgba(0,0,0,.5), rgba(0,0,0,.5) ),
+    url('../assets/img/fireworkBG.jpeg');
+    //background-image: url('../assets/img/fireworkBG.jpeg');
+    position: relative;
+    // height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    .home-header-content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        line-height: 85px;
+        text-align: center;
+        color: white;
+    }
+}
+
 .header-bg {
     background: #1E88E5; /* For browsers that do not support gradients */
     position: relative;
-    height: 125px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover; 
@@ -164,9 +188,9 @@ label {
     top: 0;
     right: 0;
     ul.navList {
-        list-style-type: none;
         margin: 0;
         padding: 0;
+        list-style-type: none;
         overflow: 0;
         li {
             display: inline-block;
@@ -191,15 +215,11 @@ label {
 /***** ADMIN LOGIN PAGE *****/
 
     .adminLoginContainer {
-        position: relative;
-        top: 50%;
-        left: 50%;
         background: white;
         width: 40rem;
         height: 45rem;
+        margin: 0 auto;
         padding: 2rem;
-        transform: translate(-50%, -50%);
-        -moz-transform: translate(-50%, -50%);
         border-radius: 1rem;
         h2 {
             font-family: "dekarregular";
@@ -223,6 +243,9 @@ label {
             border-radius: .5rem;
             text-align: center;
             color: white;
+            &:hover {
+                cursor: pointer;
+            }
         }
     }
     .adminControlPanel {
@@ -314,8 +337,7 @@ label {
 }
 .error {
     float: right;
-    font-size: 2rem;
-    font-style: italic;
+    font-size: 1.3rem;
     color: red;
 }
 
@@ -340,11 +362,11 @@ label {
     width: 50%;
 }
 .closeModal {
-    color: black;
     float: right;
     opacity: .8;
     font-size: 3rem;
     font-weight: bold;
+    color: $secondaryColor;
     &:hover, &:focus {
         opacity: 1;
         text-decoration: none;
@@ -400,15 +422,12 @@ label {
 /***** Add Volunteers *****/
 
 .adminAddVolunteers {
-        position: relative;
-        top: 50%;
-        left: 50%;
         background: white;
         width: 75%;
-        transform: translate(-50%, -50%);
-        -moz-transform: translate(-50%, -50%);
-        border-radius: 1rem;
+        margin: 0 auto;
+        margin-top: 1rem;
         margin-bottom: .5rem;
+        border-radius: 1rem;
         .title {
             background: $secondaryColor;
             padding: 1rem;
@@ -559,4 +578,53 @@ label {
     }
 }
 
+/*Media Queries*/
+   @media only screen and (max-width: 1175px) {
+        .home-header-bg {
+            height: auto;
+        }
+        .card-container {
+            display: inline-block;
+            width: 50%;
+            margin: 1rem;
+            .card {
+                width: 100%;
+            }
+        }
+        .adminControlPanel .controlPanelOption {
+            margin: 0;
+        }
+   }
+   /*Gives more space to Get-Involved Modal */
+   @media only screen and (max-width: 975px) {
+        .modalContent {
+            width: 75%;
+        }
+        .get-involved-lead {
+            padding: 0 2rem;
+        }
+
+   }
+
+   @media only screen and (max-width: 695px) {
+        .adminAddVolunteers .volFormSelection {
+            width: 100%;
+            float: none;
+        }
+
+   }
+   @media only screen and (max-width: 675px) {
+        .card-container {
+            width: 75%;
+        }
+       /*Gives more space to Get-Involved Modal */
+        .modalContent {
+            width: 95%;
+        }
+    }
+   @media only screen and (max-width: 455px) {
+        .card-container{
+            width: 95%;
+        }
+    }
 

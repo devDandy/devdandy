@@ -42,6 +42,7 @@
         }
 	}
 
+
     function validateSponPhoneNumber($inPhoneNumber ) {
         global $validForm, $sponPhoneNumberError;
 
@@ -51,11 +52,14 @@
         if (empty($inPhoneNumber)) {
             $validForm = false; 
             $sponPhoneNumberError = "Phone number is required.";
-        } else {
-            if (!strlen($cleanPhoneNumber) == 10 && !is_numeric($cleanPhoneNumber)) {
-               $validForm = false;
-               $sponPhoneNumberError = "A phone number can only have 10 numbers or cannot contain any letters.";
-            }
+        } 
+        if (strlen($cleanPhoneNumber) > 10 ) {
+            $validForm = false;
+            $sponPhoneNumberError = "A phone number can only have 10 numbers.";
+            }  
+        if(!is_numeric($cleanPhoneNumber)) {
+            $validForm = false;
+            $sponPhoneNumberError = "Phone number has to be numeric.";
         }
     }
 

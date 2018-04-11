@@ -40,11 +40,14 @@
         if (empty($inPhoneNumber)) {
             $validForm = false; 
             $inVolPhoneNumberError = "Phone number is required.";
-        } else {
-            if (!strlen($cleanPhoneNumber) == 10 && !is_numeric($cleanPhoneNumber)) {
-               $validForm = false;
-               $inVolPhoneNumberError = "A phone number can only have 10 numbers. Cannot contain any letters.";
-            }
+        } 
+        if (strlen($cleanPhoneNumber) > 10 ) {
+            $validForm = false;
+            $inVolPhoneNumberError = "A phone number can only have 10 numbers.";
+            }  
+        if(!is_numeric($cleanPhoneNumber)) {
+            $validForm = false;
+            $inVolPhoneNumberError = "Phone number has to be numeric.";
         }
     }
     function validateAvailablity($inAvailablity) {
@@ -67,11 +70,22 @@
 
     function validateBirthDate($inBirthDate) {
         global $validForm, $inVolBirthDateError; 
+
+        $inVolBirthDateError = "";
+
+        list($m, $d, $y) = explode('-', $inBirthDate);
+
         if (empty($inBirthDate)) {
             $validForm = false;
             $inVolBirthDateError = "Birth date required.";
-        } 
+        } elseif(!checkdate($m, $d, $y)) {
+            $validForm = false;
+            $inVolBirthDateError = "Birth date is invalid";
+
+        }
     }
+
+
 
         function reCAPTCHA() {
                global $validForm, $recaptchaError;

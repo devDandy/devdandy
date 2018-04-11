@@ -10,6 +10,7 @@
         $pageTitle = "Add Sponsors ";
 
         $sponId = "";
+        $SponId = "";
         $sponBusinessName = "" ;
         $sponContactFirstName = "";
         $sponContactLastName = "" ;
@@ -234,8 +235,8 @@
                         <li><a href="../get-involved.php">Get Involved</a></li>
                         <li><a href="../contact.php">Contact Us</a></li>
                         <li class="active"><a href="admin.php">Admin</a></li>
-                        <li class="logo"><a href="../index.php"><span class="ankeny">Ankeny</span><br> <span class="summerfest">Summerfest</span></a></li>
                     </ul>
+                    <div class="logo"><a href="../index.php"><span class="ankeny">Ankeny</span><br> <span class="summerfest">Summerfest</span></a></div>
                 </div>
         </nav>
 
@@ -245,7 +246,9 @@
                     <h2><?php echo $pageTitle; ?></h2>
                 </div>
                         <form method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" enctype="multipart/form-data" class="SignupForm" id="volunteerSignUpForm" name="volunteerSignupForm">
-
+                        <p class="volunteerAddedMsg">
+                            <?php echo $message; ?>
+                        </p>
                             <div class="volFormSelection">
                                 <input type="text" name="sponId" value="<?php echo $sponId ?>" style="display: none;">
                             <label for="BusinessName">Business Name:</label><span class="error"><?php echo $sponBusinessNameError ?></span><br>
@@ -274,10 +277,7 @@
                                 <input type="radio" name="sponContactPreference" value="Phone Call" checked><span class="radioDescrip">Phone Call</span><br>
                                 <input type="radio" name="sponContactPreference" value="Email"><span class="radioDescrip">Email</span>
                             <br><br>
-                            <label for="fileSelect">Logo:</label> <span class="error"><?php echo $inSponLogoError ?></span><br><br>
-                               <input type="file" id="fileSelect" name="volResume">
-                                <p class="fileMsg"><strong>Note:</strong> Only .docx, and .pdf formats allowed to a max size of 5 MB.</p>
-                            
+
                             <label for="Sponsorship Message">Tell Us Why:</label><span class="error"><?php echo $sponMessageError ?></span><br>
                             <textarea rows="4" cols="50" name="sponMessage"><?php echo $sponMessage ?></textarea><br>  
                             </div>
@@ -286,9 +286,6 @@
                                 <input type="reset" name="sponReset" value="Clear" class="btn">
                             </div>
                         </form>
-                        <p class="volunteerAddedMsg">
-                            <?php echo $message; ?>
-                        </p>
                    </div>
             </div>
 
