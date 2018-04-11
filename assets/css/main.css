@@ -148,12 +148,12 @@ ul {
 .colored-list ul li:nth-of-type(even):before {
   content: '\25CB ' !important;
   color: #FF6A6A;
-  padding-left: 5em !important; }
+  padding-left: 5em; }
 
 .colored-list ul li:nth-of-type(odd):before {
   content: '\25CB ' !important;
   color: #FF6A6A;
-  padding-left: 5em !important; }
+  padding-left: 5em; }
 
 .colored-list li:nth-of-type(even) {
   list-style-type: none; }
@@ -354,12 +354,31 @@ a {
   list-style-type: none;
   font-size: 20px; }
 
+.skills-section {
+  margin: 2em 0; }
+  .skills-section .page-heading {
+    margin: 0; }
+
 .skills-list-container {
   position: relative;
   display: inline-block;
   list-style: none;
   width: 100%;
   margin: auto; }
+
+.experience-list-item {
+  /* This fixes list items that do not indent properly */ }
+  .experience-list-item ul {
+    counter-reset: foo;
+    display: table; }
+  .experience-list-item ul > li {
+    counter-increment: foo;
+    display: table-row; }
+  .experience-list-item ul > li::before {
+    content: counter(foo) ".";
+    display: table-cell;
+    /* aha! */
+    text-align: right; }
 
 .experience-list-item-lead {
   font-weight: bold;
@@ -638,7 +657,7 @@ a {
     padding-right: 0; }
   .education-list .col-6 {
     width: 100%; }
-  .skills-list-container .col-2 {
+  .skills-list-container .col-3 {
     width: 100%; }
   .contact-form .col-6 {
     width: 100%; }

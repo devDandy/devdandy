@@ -163,14 +163,14 @@
 					&:before {
 					   content: '\25CB ' !important;
 					   color: $primary-color;
-					   padding-left: 5em !important;	
+					   padding-left: 5em;
 					}
 				}
 				li:nth-of-type(odd) {
 					&:before {
 					   content: '\25CB ' !important;
 					   color: $primary-color;
-					   padding-left: 5em !important;	
+					   padding-left: 5em;
 					}
 				}
 			}
@@ -413,6 +413,14 @@
 
 }
 
+.skills-section {
+	margin: 2em 0;
+	
+	.page-heading {
+		margin: 0;
+	}
+}
+
 .skills-list-container {
 	  position:relative;
 	  display: inline-block;  
@@ -421,6 +429,22 @@
 	  margin: auto;
 }
 
+.experience-list-item {
+	/* This fixes list items that do not indent properly */
+	ul {
+		counter-reset: foo;
+		display: table;
+	}
+	ul > li {
+		counter-increment: foo;
+		display: table-row;
+	}
+	ul > li::before {
+	    content: counter(foo) ".";
+	    display: table-cell; /* aha! */
+	    text-align: right;
+	}
+}
 
 .experience-list-item-lead {
 	font-weight: bold;
@@ -728,7 +752,7 @@
    	.education-list .col-6  {
    		width: 100%;
    	}
-   	.skills-list-container .col-2 {
+   	.skills-list-container .col-3 {
    		width: 100%;
    	}
    	//Contact Page
