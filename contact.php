@@ -69,6 +69,10 @@
 			$errorsArray['inMessage'] = "Message is required.";
 		} 
 
+		if (!empty($inputArray['honeypot'])) {
+			$errorsArray['honeypot'] = "That isn't good...";
+		}
+
 		return $errorsArray;
 
 	}
@@ -223,6 +227,7 @@
 										<textarea cols="40" rows="4" name="inMessage"><?php echo echoValue($dataArray, 'inMessage');?></textarea>
 									</div>
 								</div>
+								<input type="hidden" name="honeypot">
 								<div class="btn-group">
 									<button class="form-btn submit-btn" name="submit-btn">Submit</button>
 									<button class="form-btn reset-btn">Reset</button>
