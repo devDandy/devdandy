@@ -1,0 +1,469 @@
+@font-face {
+  font-family: 'sweet_sorrowscript';
+  src: url("../assets/fonts/sweet_sorrow-webfont.woff2") format("woff2"), url("../assets/fonts/sweet_sorrow-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'dekarregular';
+  src: url("../assets/fonts/dekar-webfont.woff2") format("woff2"), url("../assets/fonts/dekar-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+/**** SCSS VARIABLES ****/
+/**** GENERAL ****/
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+body, html {
+  height: 100%;
+  margin: 0;
+  font-size: 10px; }
+
+h1 {
+  font-size: 5.5rem; }
+
+h2 {
+  font-size: 4.5rem; }
+
+h3 {
+  font-size: 3.5rem; }
+
+h4 {
+  font-size: 2.5rem; }
+
+h5 {
+  font-size: 2.0rem; }
+
+h6 {
+  font-size: 1.8rem; }
+
+.container {
+  max-width: 950px;
+  margin: 0 auto;
+  overflow: hidden;
+  text-align: center; }
+
+h1 {
+  font-family: "sweet_sorrowscript"; }
+
+p {
+  font-size: 1.5rem;
+  font-family: 'Open Sans'; }
+
+.lead {
+  font-size: 2.5rem; }
+
+input[type=text], input[type=email], select, textarea {
+  width: 100%;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid black;
+  border-radius: 5px; }
+
+label {
+  font-size: 1.6rem; }
+
+.ankeny {
+  color: #81D4FA;
+  text-shadow: 2px 2px black; }
+
+.summerfest {
+  color: #FF6E40;
+  text-shadow: 2px 2px black; }
+
+.btn {
+  padding: 15px 20px;
+  border: none;
+  border-radius: 5px; }
+  .btn:hover {
+    cursor: pointer; }
+
+.logo {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-family: "sweet_sorrowscript"; }
+  .logo a {
+    font-family: "sweet_sorrowscript" !important; }
+
+.active a {
+  color: #FF6E40 !important; }
+
+/**HOME PAGE**/
+.home-header-bg {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url("../assets/img/fireworkBG.jpeg");
+  background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../assets/img/fireworkBG.jpeg");
+  background-image: -o-linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../assets/img/fireworkBG.jpeg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../assets/img/fireworkBG.jpeg");
+  position: relative;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+  .home-header-bg .home-header-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    line-height: 85px;
+    text-align: center;
+    color: white; }
+  .home-header-bg .header-title {
+    font-size: 10rem; }
+  .home-header-bg .lead {
+    font-family: 'Open Sans';
+    text-align: center;
+    color: white; }
+
+/*Other Header*/
+.header-bg {
+  background: #1E88E5;
+  /* For browsers that do not support gradients */
+  position: relative;
+  height: 125px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+  .header-bg .header-title {
+    float: right;
+    font-size: 4rem;
+    color: white; }
+
+.page-title {
+  text-align: center; }
+
+/***** NAVIGATION BAR *****/
+.navMenu {
+  position: relative;
+  top: 0;
+  right: 0; }
+  .navMenu ul.navList {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: 0; }
+    .navMenu ul.navList li {
+      display: inline-block; }
+      .navMenu ul.navList li a {
+        display: block;
+        padding: 18px 16px;
+        font-family: "dekarregular";
+        font-size: 2.5rem;
+        text-transform: uppercase;
+        text-decoration: none;
+        text-align: center;
+        color: white; }
+        .navMenu ul.navList li a:hover {
+          color: #F9F6B1; }
+
+/***** ADMIN LOGIN PAGE *****/
+.adminLoginContainer {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  background: white;
+  width: 40rem;
+  height: 45rem;
+  padding: 2rem;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  border-radius: 1rem; }
+  .adminLoginContainer h2 {
+    font-family: "dekarregular";
+    text-align: center; }
+  .adminLoginContainer .adminLoginFields {
+    width: 100%;
+    border: 2px solid black;
+    margin-bottom: 2.5rem;
+    padding: 1.7rem 1.4rem;
+    border-radius: 5px; }
+  .adminLoginContainer .adminLoginActionFields {
+    display: block;
+    width: 100%;
+    background: #1E88E5;
+    margin: 0 auto;
+    margin-bottom: 2.5rem;
+    padding: 1.2rem 1.7rem;
+    border: none;
+    border-radius: .5rem;
+    text-align: center;
+    color: white; }
+
+.adminControlPanel {
+  border-radius: 1rem;
+  text-align: center; }
+  .adminControlPanel h1 {
+    color: white; }
+  .adminControlPanel .controlPanelOption {
+    background: white;
+    width: 30%;
+    height: 50rem;
+    float: left;
+    margin: 0 1.5rem;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px; }
+    .adminControlPanel .controlPanelOption button {
+      width: 75%;
+      background: #FF6E40;
+      margin: 1rem 3rem 2rem 3rem;
+      font-size: 2rem; }
+      .adminControlPanel .controlPanelOption button:hover {
+        background: #ff815a;
+        cursor: pointer; }
+    .adminControlPanel .controlPanelOption .card-title {
+      background: #81D4FA;
+      border-top-right-radius: 15px;
+      border-top-left-radius: 15px; }
+      .adminControlPanel .controlPanelOption .card-title h1 {
+        font-size: 4rem;
+        font-family: "dekarregular" !important; }
+    .adminControlPanel .controlPanelOption .card-image {
+      margin: 2.5rem auto; }
+    .adminControlPanel .controlPanelOption .reset {
+      margin-bottom: 0; }
+
+/***** CONTACT US PAGE *****/
+.contactFormContainer {
+  background: white;
+  padding: 15px 20px;
+  text-align: center;
+  border: 2px solid black;
+  border-radius: 15px; }
+  .contactFormContainer label {
+    float: left;
+    font-size: 2rem; }
+  .contactFormContainer input[type=text], .contactFormContainer input[type=email], .contactFormContainer select, .contactFormContainer textarea {
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid black;
+    border-radius: 5px; }
+  .contactFormContainer .contactFormReCAPTCHA {
+    text-align: center;
+    margin: 0 auto; }
+  .contactFormContainer input[type=submit], .contactFormContainer input[type=reset] {
+    display: inline-block;
+    background: #81D4FA;
+    width: 45%;
+    margin: 0 auto;
+    padding: 1rem;
+    border: none;
+    border-radius: 5px;
+    overflow: hidden; }
+    .contactFormContainer input[type=submit]:hover, .contactFormContainer input[type=reset]:hover {
+      cursor: pointer; }
+
+.error {
+  float: right;
+  font-size: 2rem;
+  font-style: italic;
+  color: red; }
+
+/***** GET-INVOLVED PAGE *****/
+.modal {
+  display: none;
+  /*Hidden by default */
+  position: fixed;
+  /*Stuck in place*/
+  z-index: 10;
+  /*Gotta be on top*/
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  /*Scroll may be needed*/
+  background-color: black;
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */ }
+
+.modalContent {
+  background-color: white;
+  margin: 10% auto;
+  padding: 20px;
+  width: 50%; }
+
+.closeModal {
+  color: black;
+  float: right;
+  opacity: .8;
+  font-size: 3rem;
+  font-weight: bold; }
+  .closeModal:hover, .closeModal:focus {
+    opacity: 1;
+    text-decoration: none;
+    cursor: pointer; }
+
+.SignupForm {
+  text-align: left; }
+  .SignupForm label {
+    float: left;
+    font-weight: bold; }
+  .SignupForm input[type=text], .SignupForm input[type=email], .SignupForm select, .SignupForm textarea {
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid black;
+    border-radius: 5px; }
+  .SignupForm .checkboxListItem {
+    display: inline-block;
+    font-size: 1.6rem; }
+    .SignupForm .checkboxListItem .checkboxDescription {
+      padding-left: 1rem; }
+  .SignupForm input[type=file], .SignupForm .fileMsg {
+    margin-bottom: 5px; }
+  .SignupForm .btnContainer {
+    text-align: center; }
+  .SignupForm .btn {
+    display: inline-block;
+    background: #81D4FA;
+    width: 45%;
+    margin: 0 auto;
+    padding: 1rem;
+    border: none;
+    border-radius: 5px;
+    overflow: hidden; }
+    .SignupForm .btn:hover {
+      cursor: pointer; }
+  .SignupForm .radioDescrip {
+    font-size: 1.6rem;
+    padding-left: 1rem; }
+
+/***** Add Volunteers *****/
+.adminAddVolunteers {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  background: white;
+  width: 75%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  border-radius: 1rem;
+  margin-bottom: .5rem; }
+  .adminAddVolunteers .title {
+    background: #FF6E40;
+    padding: 1rem;
+    text-align: center;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem; }
+  .adminAddVolunteers .volFormSelection {
+    width: 50%;
+    float: left;
+    margin-top: 3rem;
+    padding: 0 1rem 0 1rem; }
+    .adminAddVolunteers .volFormSelection input[type=text], .adminAddVolunteers .volFormSelection input[type=email], .adminAddVolunteers .volFormSelection textarea {
+      width: 95%; }
+  .adminAddVolunteers .btnContainer {
+    display: inline-block;
+    width: 100%;
+    margin-top: 3rem;
+    padding-bottom: 3rem; }
+    .adminAddVolunteers .btnContainer .btn {
+      width: 25%; }
+  .adminAddVolunteers .volunteerAddedMsg {
+    padding-bottom: 1rem;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #81D4FA; }
+
+/***** List of Volunteers / Sponsors *****/
+.listView {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url("../assets/img/fireworkBG.jpeg");
+  background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../assets/img/fireworkBG.jpeg");
+  background-image: -o-linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../assets/img/fireworkBG.jpeg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../assets/img/fireworkBG.jpeg");
+  position: relative;
+  height: 100%;
+  background-size: cover; }
+  .listView .navMenuNew {
+    position: relative;
+    top: 0;
+    right: 0; }
+    .listView .navMenuNew ul.navList {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: 0; }
+      .listView .navMenuNew ul.navList li {
+        display: inline-block; }
+        .listView .navMenuNew ul.navList li a {
+          display: block;
+          padding: 18px 16px;
+          font-family: "dekarregular";
+          font-size: 2.5rem;
+          text-transform: uppercase;
+          text-decoration: none;
+          text-align: center;
+          color: white; }
+          .listView .navMenuNew ul.navList li a:hover {
+            color: #F9F6B1; }
+
+.listContainer {
+  background-color: #81D4FA;
+  text-align: center;
+  margin: 0 auto; }
+  .listContainer .listBlock {
+    background-color: white !important;
+    display: inline-block;
+    width: 45%;
+    border: 1px solid black;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    margin-bottom: 2rem; }
+    .listContainer .listBlock .editIconContainer {
+      float: left;
+      padding: .5rem .5rem 0 .5rem; }
+      .listContainer .listBlock .editIconContainer a {
+        text-decoration: none;
+        color: black; }
+        .listContainer .listBlock .editIconContainer a:hover {
+          font-weight: bold; }
+        .listContainer .listBlock .editIconContainer a span {
+          display: block;
+          font-size: 1.4rem; }
+    .listContainer .listBlock .deleteIconContainer {
+      float: right;
+      padding: .5rem .5rem 0 .5rem; }
+      .listContainer .listBlock .deleteIconContainer a {
+        text-decoration: none;
+        color: black; }
+        .listContainer .listBlock .deleteIconContainer a:hover {
+          font-weight: bold; }
+        .listContainer .listBlock .deleteIconContainer a span {
+          display: block;
+          font-size: 1.4rem; }
+    .listContainer .listBlock .listTitle {
+      background-color: #FF6E40;
+      border-top-right-radius: inherit;
+      border-top-left-radius: inherit; }
+    .listContainer .listBlock .listBody {
+      text-align: left;
+      padding: 0 2rem; }
+      .listContainer .listBlock .listBody p {
+        font-size: 1.6rem; }
+      .listContainer .listBlock .listBody span {
+        text-align: right; }
+
+/***** Send email to all volunteers *****/
+.sendEmailContainer .emailVolunteersForm {
+  width: 95%;
+  height: 25rem;
+  margin-bottom: 1rem; }
+
+.sendEmailContainer .btnContainer {
+  padding-bottom: 1rem; }
+  .sendEmailContainer .btnContainer .btn {
+    width: 45%; }

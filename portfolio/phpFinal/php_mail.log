@@ -1,0 +1,12 @@
+[14-Dec-2017 10:11:46 CST6CDT] mail() on [/home/devdan37/public_html/homework/wdv341/phpFinal/php/include/Email.php:57]: To: djschneider1@dmacc.edu -- Headers: From: Dschnd@gmail.com
+[14-Dec-2017 10:11:46 CST6CDT] mail() on [/home/devdan37/public_html/homework/wdv341/phpFinal/php/include/Email.php:57]: To: Dschnd@gmail.com -- Headers: From: djschneider1@dmacc.edu
+[14-Dec-2017 10:16:02 CST6CDT] mail() on [/home/devdan37/public_html/homework/wdv341/phpFinal/php/include/Email.php:57]: To: djschneider1@dmacc.edu -- Headers: From: dschnd@gmail.com
+[14-Dec-2017 10:16:02 CST6CDT] mail() on [/home/devdan37/public_html/homework/wdv341/phpFinal/php/include/Email.php:57]: To: dschnd@gmail.com -- Headers: From: djschneider1@dmacc.edu
+[14-Dec-2017 11:47:30 CST6CDT] mail() on [/home/devdan37/public_html/homework/wdv341/phpFinal/php/include/Email.php:57]: To: djschneider1@dmacc.edu -- Headers: From: amacias@dmacc.edu
+[14-Dec-2017 11:47:30 CST6CDT] mail() on [/home/devdan37/public_html/homework/wdv341/phpFinal/php/include/Email.php:57]: To: amacias@dmacc.edu -- Headers: From: djschneider1@dmacc.edu
+[14-Dec-2017 11:48:21 CST6CDT] mail() on [/home/devdan37/public_html/homework/wdv341/phpFinal/php/include/Email.php:57]: To: djschneider1@dmacc.edu -- Headers: From: amacias@dmacc.edu
+[14-Dec-2017 11:48:21 CST6CDT] mail() on [/home/devdan37/public_html/homework/wdv341/phpFinal/php/include/Email.php:57]: To: amacias@dmacc.edu -- Headers: From: djschneider1@dmacc.edu
+[14-Dec-2017 11:52:41 CST6CDT] mail() on [/home/devdan37/public_html/homework/wdv341/phpFinal/php/include/Email.php:57]: To: djschneider1@dmacc.edu -- Headers: From: test@gmail.com
+[14-Dec-2017 11:52:42 CST6CDT] mail() on [/home/devdan37/public_html/homework/wdv341/phpFinal/php/include/Email.php:57]: To: test@gmail.com -- Headers: From: djschneider1@dmacc.edu
+[14-Dec-2017 14:04:31 CST6CDT] mail() on [/home/devdan37/public_html/homework/wdv341/phpFinal/php/include/Email.php:57]: To: djschneider1@dmacc.edu -- Headers: From: Dschnd@gmail.com
+[14-Dec-2017 14:04:31 CST6CDT] mail() on [/home/devdan37/public_html/homework/wdv341/phpFinal/php/include/Email.php:57]: To: Dschnd@gmail.com -- Headers: From: djschneider1@dmacc.edu
