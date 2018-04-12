@@ -267,7 +267,9 @@
 		height: 42px;
 		float: right;
 		margin-top: 10px;
+		text-shadow: 1px 1px 5px white;
 	}
+
 
 	.desktop-social-media {
 		text-align: center;
@@ -350,6 +352,9 @@
 			cursor: pointer;
 		}
 	}
+}
+.mobile-active {
+	text-shadow: 1px 1px 5px white;
 }
 
 

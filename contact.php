@@ -139,7 +139,7 @@
 							<a href="about.html">About</a>
 							<a href="resume.html">Resume</a> 
 							<a href="portfolio.html">Portfolio</a> 
-							<a href="#">Contact</a>
+							<a href="#" class="mobile-active">Contact</a>
 						</div>
 		</nav>
 

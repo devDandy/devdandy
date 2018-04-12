@@ -38,7 +38,7 @@
 						</div>
 						<div class="mobile-menu" id="mobile-menu">
   							<a href="javascript:void(0)" class="close-btn" onclick="closeNav()"> &times; </a>
-							<a href="#"><h1>devDandy</h1></a> 
+							<a href="#" class="mobile-active"><h1>devDandy</h1></a> 
 							<a href="homework/index.html">Homework</a> 
 							<a href="about.html">About</a>
 							<a href="resume.html">Resume</a> 

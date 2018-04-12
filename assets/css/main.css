@@ -227,7 +227,8 @@ a {
   width: 42px;
   height: 42px;
   float: right;
-  margin-top: 10px; }
+  margin-top: 10px;
+  text-shadow: 1px 1px 5px white; }
 
 .desktop-social-media {
   text-align: center; }
@@ -305,6 +306,9 @@ a {
     padding: 5px; }
     .mobile-nav .open-hamburger-menu:hover {
       cursor: pointer; }
+
+.mobile-active {
+  text-shadow: 1px 1px 5px white; }
 
 /**** ABOUT PAGE ****/
 .about-section {
