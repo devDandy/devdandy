@@ -198,7 +198,7 @@
 	.logo {
 		display: block;
 		width: 288px;
-		margin: 0 auto;
+		margin: 1em auto;
 	}
 
 	/** BUTTONS **/
@@ -331,7 +331,7 @@
 		display: block;
 		padding-right: 10px;
 	    font-size: 60px;
-	    text-align: right;
+	    text-align: center;
     }
 }
 .mobile-nav {
@@ -347,6 +347,7 @@
 	}
 	.open-hamburger-menu {
 		float: right;
+		margin: 9px;
 		padding: 5px;
 		&:hover {
 			cursor: pointer;
