@@ -257,7 +257,7 @@ a {
   /* Stay at the top */
   left: 0;
   background: #2A2D34;
-  opacity: .9;
+  opacity: 1;
   overflow-x: hidden;
   /* Disable horizontal scroll */
   -webkit-transition: 0.5s;
@@ -276,16 +276,19 @@ a {
     color: white; }
     .mobile-menu a:nth-child(odd) {
       color: #FF0F0F; }
+      .mobile-menu a:nth-child(odd):focus {
+        text-shadow: 1px 1px 5px #00A7E0; }
     .mobile-menu a:nth-child(even) {
       color: #00A7E0; }
+      .mobile-menu a:nth-child(even):focus {
+        text-shadow: 1px 1px 5px #FF6A6A; }
     .mobile-menu a h1 {
       color: white; }
   .mobile-menu .close-btn {
-    position: absolute;
-    top: 0;
-    right: 25px;
+    display: block;
+    padding-right: 10px;
     font-size: 60px;
-    margin-left: 50px; }
+    text-align: right; }
 
 .mobile-nav {
   display: none;

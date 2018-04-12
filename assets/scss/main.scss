@@ -298,7 +298,7 @@
     top: 0; /* Stay at the top */
     left: 0;
 	background: $third-color;
-	opacity: .9;    
+	opacity: 1;    
 	overflow-x: hidden; /* Disable horizontal scroll */
     transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
     a {
@@ -311,20 +311,25 @@
 	    color: white;
 		&:nth-child(odd)  {
 			color: $alt-primary-color ;
+			&:focus {
+				text-shadow: 1px 1px 5px $secondary-color;
+			}
 			}
 		&:nth-child(even)  {
 			color: $secondary-color ;
+			&:focus {
+				text-shadow: 1px 1px 5px $primary-color;
+			}
 			}
 		h1 {
 			color:  white;
 		}
     }
     .close-btn {
-	    position: absolute;
-	    top: 0;
-	    right: 25px;
+		display: block;
+		padding-right: 10px;
 	    font-size: 60px;
-	    margin-left: 50px;
+	    text-align: right;
     }
 }
 .mobile-nav {
